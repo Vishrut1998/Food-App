@@ -1,0 +1,58 @@
+.navbar_color{
+    background-color: #385fa354;
+    width: 100%;
+}
+
+.logo{
+    height: 84px;
+}
+
+.search_bar{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    width: 1000px;
+    margin-top: -66px;
+    padding: 5px;
+    font-family: sans-serif;
+    
+    font-size: x-large;
+    
+}
+
+.search_icon{
+    float: left;
+    height: 38px;
+    width: 83px;
+    margin-top: -52px;
+    margin-left: 1440px;
+}
+
+.user_icon{
+    float: right;
+    height: 58px;
+    width: 89px;
+    margin-top: -70px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.nav-items > ul{
+    list-style-type: none;
+    display: flex;
+
+}
+
+/* .nav-items > ul > li{
+    padding: 10px;
+} */
+
+.food_logo{
+    width: 100px;
+}
