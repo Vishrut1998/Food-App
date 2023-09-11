@@ -594,45 +594,6 @@ var _profileJs = require("./profile.js");
 var _profileJsDefault = parcelHelpers.interopDefault(_profileJs);
 var _profileClass = require("./profileClass");
 var _profileClassDefault = parcelHelpers.interopDefault(_profileClass);
-const About1 = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "About Page"
-            }, void 0, false, {
-                fileName: "src/components/about.js",
-                lineNumber: 7,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "This is Vishrut Sharma's Food Villa"
-            }, void 0, false, {
-                fileName: "src/components/about.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsDefault.default), {
-                name: "Vishrut"
-            }, void 0, false, {
-                fileName: "src/components/about.js",
-                lineNumber: 11,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileClassDefault.default), {
-                name: "Vishrut Class"
-            }, void 0, false, {
-                fileName: "src/components/about.js",
-                lineNumber: 12,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/about.js",
-        lineNumber: 6,
-        columnNumber: 10
-    }, undefined);
-};
-_c = About1;
 class About extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
@@ -650,41 +611,51 @@ class About extends (0, _reactDefault.default).Component {
                     children: "About Page"
                 }, void 0, false, {
                     fileName: "src/components/about.js",
-                    lineNumber: 28,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: "This is Vishrut Sharma's Food Villa"
-                }, void 0, false, {
-                    fileName: "src/components/about.js",
-                    lineNumber: 29,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsDefault.default), {
-                    name: "Vishrut"
-                }, void 0, false, {
-                    fileName: "src/components/about.js",
-                    lineNumber: 32,
+                    lineNumber: 18,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileClassDefault.default), {
                     name: "Vishrut Class"
                 }, void 0, false, {
                     fileName: "src/components/about.js",
-                    lineNumber: 33,
+                    lineNumber: 19,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "This is Vishrut Sharma's Food Villa"
+                }, void 0, false, {
+                    fileName: "src/components/about.js",
+                    lineNumber: 20,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: [
+                        "Click ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: "https://portfoliovishrut.netlify.app/",
+                            target: "_blank",
+                            children: "here"
+                        }, void 0, false, {
+                            fileName: "src/components/about.js",
+                            lineNumber: 23,
+                            columnNumber: 26
+                        }, this),
+                        " for my other works"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/about.js",
+                    lineNumber: 23,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/about.js",
-            lineNumber: 27,
+            lineNumber: 17,
             columnNumber: 12
         }, this);
     }
 }
 exports.default = About;
-var _c;
-$RefreshReg$(_c, "About1");
 
   $parcel$ReactRefreshHelpers$6418.postlude(module);
 } finally {

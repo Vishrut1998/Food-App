@@ -1,9 +1,10 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import Logo from "../assets/images/villa.png";
 
 import {Link} from 'react-router-dom';
 import useOnline from '../utils/useOnline';
+import UserContext from '../utils/UserContext';
 
 
 const Title = () => (
@@ -17,6 +18,8 @@ const Title = () => (
 const Navbar = () => {
     const [loggedIn , setLoggedIn] = useState(false);
     const isOnline = useOnline();
+    const {user} = useContext(UserContext);
+
     return(
         <div className='flex justify-between bg-purple-100 shadow-lg'>
             <Title/>
@@ -31,6 +34,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <h1 className='py-10'>{isOnline?'🟢Online' : '🔴Offline'}</h1>
+            <span className='p-10 font-bold text-red-900'>{user.name}</span>
             {loggedIn ?<button onClick={() => setLoggedIn(false)}>Logout</button>:<button onClick={() => setLoggedIn(true)}>Login</button>}
         </div>
 

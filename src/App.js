@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from "react";
+import React, {lazy, Suspense , useState} from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "../src/components/navbar";
 // import About from "./components/about";
@@ -13,6 +13,7 @@ import Footer from "../src/components/footer.js"
 import Card from "../src/components/cards";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Shimmer from "./components/shimmer";
+import UserContext from "./utils/UserContext";
 
 
 
@@ -20,12 +21,22 @@ const Instamart = lazy(() => import('./components/Instamart'));
 const About = lazy(() => import('./components/about'));
 
 const AppLayout = () => {
+
+    const [user, setUser] = useState({
+        name: "Vishrut S",
+        email: "vishrut@gmail.com"
+    })
+
     return(
         <>
+        <UserContext.Provider value={{
+            user:user,
+            setUser:setUser,
+        }}>
             <Navbar/>
             <Outlet/>
-            <br/>
             <Footer/>
+        </UserContext.Provider>
         </>
     )
 }
@@ -38,7 +49,7 @@ const appRouter = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Body/>        
+                element:<Body user={{name:"By Vishrut Sharma"}}/>        
             },
             {
                 path:"/about",
