@@ -9,6 +9,7 @@ import {Link} from 'react-router-dom';
 import { filterData } from '../utils/helper';
 import useOnline from '../utils/useOnline';
 import UserContext from '../utils/UserContext';
+import {FETCH_RESTUARANTS_DATA} from  "../constants.js";
 
 
 
@@ -29,10 +30,11 @@ const Body = () => {
     async function getRestuarants(){
         
         try{
-        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(FETCH_RESTUARANTS_DATA);
         const json = await data.json()
         const restaurantList = json?.data?.cards[2].card.card.gridElements?.infoWithStyle?.restaurants;
-        //console.log(restaurantList);
+        
+        console.log(restaurantList);
         setFilteredResturants(restaurantList);
         setAllResturants(restaurantList);
         //console.log(restaurantList,"vishrut")
