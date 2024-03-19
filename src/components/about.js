@@ -3,18 +3,7 @@ import { Outlet } from 'react-router-dom';
 import ProfileFunctional from './profile.js';
 import Profile from "./profileClass";
 
-const About1 = () =>{
-    return(
-        <div>
-            <h1>About Page</h1>
-            <p>
-                This is Vishrut Sharma's Food Villa
-            </p>
-            <ProfileFunctional name={'Vishrut'}/>
-            <Profile name={'Vishrut Class'}/>
-        </div>
-    )
-}
+
 
 class About extends React.Component{
    
@@ -36,11 +25,13 @@ class About extends React.Component{
         return(
             <div>
                 <h1>About Page</h1>
+                <Profile name={'Vishrut Class'}/>
                 <p>
                     This is Vishrut Sharma's Food Villa
                 </p>
-                <ProfileFunctional name={'Vishrut'}/>
-                <Profile name={'Vishrut Class'}/>
+                <p>Click <a href='https://portfoliovishrut.netlify.app/' target="_blank">here</a> for my other works</p>
+                
+                
             </div>
         )
     }

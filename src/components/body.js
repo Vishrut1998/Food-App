@@ -4,10 +4,12 @@ import {resutrantData} from "../constants.js";
 import RestaurantMenu from './restaurantMenu';
 import Shimmer from './shimmer';
 import "../styles/cards.css";
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import { filterData } from '../utils/helper';
 import useOnline from '../utils/useOnline';
+import UserContext from '../utils/UserContext';
+import {FETCH_RESTUARANTS_DATA} from  "../constants.js";
 
 
 
@@ -17,6 +19,7 @@ const Body = () => {
     const [allResturants, setAllResturants] = useState([]);
     const [filteredResturants, setFilteredResturants] = useState([]);
     const [searchTxt, setSearchTxt] = useState();
+    const {user, setUser} = useContext(UserContext)
 
     useEffect(() => {
         
@@ -27,10 +30,11 @@ const Body = () => {
     async function getRestuarants(){
         
         try{
-        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(FETCH_RESTUARANTS_DATA);
         const json = await data.json()
         const restaurantList = json?.data?.cards[2].card.card.gridElements?.infoWithStyle?.restaurants;
-        //console.log(restaurantList);
+        
+        console.log(restaurantList);
         setFilteredResturants(restaurantList);
         setAllResturants(restaurantList);
         //console.log(restaurantList,"vishrut")
@@ -61,6 +65,18 @@ const Body = () => {
                 const data = filterData(searchTxt,allResturants)
                 setFilteredResturants(data)  
             }}>Search</button>
+            <input className='focus:bg-teal-100 p-2 m-2' value={user.name} onChange={
+                e => setUser({
+                    ...user,
+                    name : e.target.value,
+                })
+            }></input>
+            <input className='focus:bg-teal-100 p-2 m-2' value={user.email} onChange={
+                e => setUser({
+                    ...user, 
+                    email: e.target.value
+                })
+            }></input>
            
         </div>
 
@@ -71,7 +87,7 @@ const Body = () => {
             {
                 filteredResturants.map(restaurant => {
                     
-                    return  <Link  to={"/restaurant/"+restaurant.info.id} key={restaurant.info.id}><Card {...restaurant.info} key={restaurant.info.id}/></Link>
+                    return  <Link  to={"/restaurant/"+restaurant.info.id} key={restaurant.info.id}><Card {...restaurant.info} key={restaurant.info.id} user={user}/></Link>
                 })
             }        
 
