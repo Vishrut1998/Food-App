@@ -245,21 +245,8 @@ img, video {
   position: relative;
 }
 
-.inset-x-0 {
-  left: 0;
-  right: 0;
-}
-
 .right-0 {
   right: 0;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.top-2 {
-  top: .5rem;
 }
 
 .top-4 {
@@ -285,14 +272,6 @@ img, video {
 
 .mr-\[250px\] {
   margin-right: 250px;
-}
-
-.ml-2 {
-  margin-left: .5rem;
-}
-
-.mr-2 {
-  margin-right: .5rem;
 }
 
 .flex {
@@ -339,14 +318,6 @@ img, video {
   border-width: 1px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
-.border-b-8 {
-  border-bottom-width: 8px;
-}
-
 .border-b-4 {
   border-bottom-width: 4px;
 }
@@ -359,6 +330,16 @@ img, video {
 .border-indigo-500 {
   --tw-border-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
+}
+
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-pink-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 231 243 / var(--tw-bg-opacity));
 }
 
 .bg-pink-50 {
@@ -374,16 +355,6 @@ img, video {
 .bg-purple-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(88 28 135 / var(--tw-bg-opacity));
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
-}
-
-.bg-pink-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 231 243 / var(--tw-bg-opacity));
 }
 
 .bg-red-100 {
@@ -405,10 +376,6 @@ img, video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-\[10px\] {
-  padding: 10px;
 }
 
 .px-2 {
@@ -435,44 +402,12 @@ img, video {
   padding-left: 1.25rem;
 }
 
-.pr-3 {
-  padding-right: .75rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
-}
-
-.pr-9 {
-  padding-right: 2.25rem;
-}
-
-.pr-8 {
-  padding-right: 2rem;
-}
-
-.pr-7 {
-  padding-right: 1.75rem;
+.pl-\[10px\] {
+  padding-left: 10px;
 }
 
 .pr-16 {
   padding-right: 4rem;
-}
-
-.pr-12 {
-  padding-right: 3rem;
-}
-
-.pr-\[10px\] {
-  padding-right: 10px;
-}
-
-.pl-\[10px\] {
-  padding-left: 10px;
 }
 
 .font-sans {
@@ -557,6 +492,133 @@ img, video {
   margin: 10px;
   padding: 10px;
   display: flex;
+}
+
+.darkBG {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-color: #0003;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  width: 550px;
+  height: 370px;
+  color: #fff;
+  z-index: 10;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #0000000a;
+}
+
+.modalHeader {
+  height: 50px;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+.heading {
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.modalContent {
+  color: #2c3e50;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.modalActions {
+  width: 100%;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 2px;
+}
+
+.actionsContainer {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.closeBtn {
+  cursor: pointer;
+  color: #eee;
+  background: red;
+  border: none;
+  border-radius: 8px;
+  align-self: flex-end;
+  margin-top: -7px;
+  margin-right: -7px;
+  padding: 4px 8px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all .25s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 5px 20px #0000000f;
+}
+
+.closeBtn:hover {
+  transform: translate(-4px, 4px);
+  box-shadow: 0 5px 20px #0000000a;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  color: #fff;
+  background: #ff3e4e;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 11px 28px;
+  font-size: .8rem;
+  font-weight: 500;
+  transition: all .25s;
+}
+
+.deleteBtn:hover {
+  background: #ff3e4e;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px #ff3e4e99;
+}
+
+.cancelBtn {
+  cursor: pointer;
+  color: #eee;
+  background: red;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 11px 28px;
+  font-size: .8rem;
+  font-weight: 500;
+  transition: all .25s;
+}
+
+.cancelBtn:hover {
+  box-shadow: none;
+  background: #f38f8f;
+  transform: none;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

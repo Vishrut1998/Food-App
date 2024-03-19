@@ -40,7 +40,8 @@ const RestaurantMenu = () => {
                     {
                         Object.values(restaurantMenu)?.map((items) => <li key={items?.card?.info?.id}>{items?.card?.info?.name} - {items?.card?.info?.price/100+' ₹'} 
                         <div >
-                        <button className="p-2 m-2 bg-green-100" onClick={() => {addFoodItem(items)}}>Add</button><button className="p-2 m-2 bg-red-100" onClick={() => {removeFoodItem(items)}}>Remove</button>
+                        <button className="p-2 m-2 bg-green-100" onClick={() => {addFoodItem(items)}}>Add</button>
+                        <button className="p-2 m-2 bg-red-100" onClick={() => {removeFoodItem(items)}}>Remove</button>
                         </div>
                         </li>)
                     }
