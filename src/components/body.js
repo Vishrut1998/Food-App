@@ -10,6 +10,7 @@ import { filterData } from '../utils/helper';
 import useOnline from '../utils/useOnline';
 import UserContext from '../utils/UserContext';
 import {FETCH_RESTUARANTS_DATA} from  "../constants.js";
+import Modal from './modal';
 
 
 
@@ -18,8 +19,10 @@ const Body = () => {
     
     const [allResturants, setAllResturants] = useState([]);
     const [filteredResturants, setFilteredResturants] = useState([]);
+    const [modalOpen, setModalOpen] = useState(false);
     const [searchTxt, setSearchTxt] = useState();
     const {user, setUser} = useContext(UserContext)
+    
 
     useEffect(() => {
         
@@ -30,13 +33,13 @@ const Body = () => {
     async function getRestuarants(){
         
         try{
-        const data = await fetch(FETCH_RESTUARANTS_DATA);
-        const json = await data.json()
-        const restaurantList = json?.data?.cards[2].card.card.gridElements?.infoWithStyle?.restaurants;
+        // const data = await fetch(FETCH_RESTUARANTS_DATA);
+        // const json = await data.json()
+        const restaurantList = FETCH_RESTUARANTS_DATA?.data?.cards[4].card.card.gridElements?.infoWithStyle?.restaurants;
         
         console.log(restaurantList);
         setFilteredResturants(restaurantList);
-        setAllResturants(restaurantList);
+        setAllResturants(restaurantList);   
         //console.log(restaurantList,"vishrut")
         }
         catch(error){
@@ -77,6 +80,9 @@ const Body = () => {
                     email: e.target.value
                 })
             }></input>
+            <button className='px-5 py-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-lg'
+            onClick={() => setModalOpen(true)}
+            >Test Text</button>{modalOpen && <Modal setModalOpen={setModalOpen}/>}
            
         </div>
 

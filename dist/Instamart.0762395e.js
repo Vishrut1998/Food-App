@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("3a88c689519aac57");
-var ErrorOverlay = require("620fce52ab194916");
+var Refresh = require("64a4a3e7682d92f9");
+var ErrorOverlay = require("eba3bff18ea1a55");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,7 +163,7 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"3a88c689519aac57":"786KC","620fce52ab194916":"1dldy"}],"2paN5":[function(require,module,exports) {
+},{"64a4a3e7682d92f9":"786KC","eba3bff18ea1a55":"1dldy"}],"2paN5":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -694,6 +694,6 @@ $RefreshReg$(_c1, "Instamart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["1xC6H","2paN5"], null, "parcelRequirea9e5")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","2paN5"], null, "parcelRequirea9e5")
 
 //# sourceMappingURL=Instamart.0762395e.js.map
