@@ -35441,9 +35441,9 @@ const Body = ()=>{
     }, []);
     async function getRestuarants() {
         try {
-            // const data = await fetch(FETCH_RESTUARANTS_DATA);
-            // const json = await data.json()
-            const restaurantList = (0, _constantsJs.FETCH_RESTUARANTS_DATA)?.data?.cards[4].card.card.gridElements?.infoWithStyle?.restaurants;
+            const data = await fetch((0, _constantsJs.FETCH_RESTUARANTS_DATA));
+            const json = await data.json();
+            const restaurantList = json?.data?.cards[4].card.card.gridElements?.infoWithStyle?.restaurants;
             console.log(restaurantList);
             setFilteredResturants(restaurantList);
             setAllResturants(restaurantList);
