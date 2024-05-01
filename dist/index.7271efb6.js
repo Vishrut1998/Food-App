@@ -36250,8 +36250,8 @@ const RestaurantMenu = ()=>{
     _s();
     const { resId  } = (0, _reactRouterDom.useParams)();
     const restaurant = (0, _useRestaurantDefault.default)(resId);
-    const restaurantHome = restaurant?.cards[0]?.card?.card?.info;
-    const restaurantMenu = restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
+    const restaurantHome = restaurant?.cards[2]?.card?.card?.info;
+    const restaurantMenu = restaurant?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
     const dispatch = (0, _reactRedux.useDispatch)();
     const addFoodItem = (item)=>{
         dispatch((0, _cartSlice.addItem)(item));
