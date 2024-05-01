@@ -12,8 +12,8 @@ const RestaurantMenu = () => {
 
     const {resId} = useParams();
     const restaurant = useRestaurant(resId);
-    const restaurantHome = restaurant?.cards[0]?.card?.card?.info;
-    const restaurantMenu = restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
+    const restaurantHome = restaurant?.cards[2]?.card?.card?.info;
+    const restaurantMenu = restaurant?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
     const dispatch = useDispatch();
     const addFoodItem = (item) => {
         dispatch(addItem(item))
