@@ -68,7 +68,7 @@ const Body = () => {
                 const data = filterData(searchTxt,allResturants)
                 setFilteredResturants(data)  
             }}>Search</button>
-            <input className='focus:bg-teal-100 p-2 m-2' value={user.name} onChange={
+            {/* <input className='focus:bg-teal-100 p-2 m-2' value={user.name} onChange={
                 e => setUser({
                     ...user,
                     name : e.target.value,
@@ -83,7 +83,7 @@ const Body = () => {
             <button className='px-5 py-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-lg'
             onClick={() => setModalOpen(true)}
             >Test Text</button>{modalOpen && <Modal setModalOpen={setModalOpen}/>}
-           
+            */}
         </div>
 
 

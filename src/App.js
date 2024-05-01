@@ -25,8 +25,8 @@ const About = lazy(() => import('./components/about'));
 const AppLayout = () => {
 
     const [user, setUser] = useState({
-        name: "Vishrut S",
-        email: "vishrut@gmail.com"
+        // name: "Vishrut S",
+        // email: "vishrut@gmail.com"
     })
 
     return(
