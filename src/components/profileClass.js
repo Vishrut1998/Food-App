@@ -33,9 +33,9 @@ class Profile extends React.Component{
         return <div>
             
             <div className="relative">
-            <h2 className=" font-sans text-xl">Name : {this.state.userInfo.login}</h2>
+            {/* <h2 className=" font-sans text-xl">Name : {this.state.userInfo.login}</h2> */}
             </div>
-            <img className="absolute inset-y-50 right-0 h-[400px] w-[400px] mr-[250px] rounded-lg" src = {this.state.userInfo.avatar_url}/>
+            <img className="absolute inset-y-50 right-0 h-[400px] w-[400px] mt-[-80px] mr-[250px] rounded-lg" src = {this.state.userInfo.avatar_url}/>
             
            
         </div>
