@@ -34424,10 +34424,7 @@ parcelHelpers.defineInteropFlag(exports);
 function _objectWithoutPropertiesLoose(source, excluded) {
     if (source == null) return {};
     var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
+    for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) {
         if (excluded.indexOf(key) >= 0) continue;
         target[key] = source[key];
     }
@@ -36469,8 +36466,8 @@ var _reselect = require("reselect");
 // src/getDefaultMiddleware.ts
 var _reduxThunk = require("redux-thunk");
 var _reduxThunkDefault = parcelHelpers.interopDefault(_reduxThunk);
-var global = arguments[3];
 var process = require("f0e04f2e7af17522");
+var global = arguments[3];
 var __extends = undefined && undefined.__extends || function() {
     var extendStatics = function(d, b) {
         extendStatics = Object.setPrototypeOf || ({
@@ -40008,11 +40005,11 @@ var _typeofJs = require("./typeof.js");
 var _typeofJsDefault = parcelHelpers.interopDefault(_typeofJs);
 var _toPrimitiveJs = require("./toPrimitive.js");
 var _toPrimitiveJsDefault = parcelHelpers.interopDefault(_toPrimitiveJs);
-function _toPropertyKey(arg) {
-    var key = (0, _toPrimitiveJsDefault.default)(arg, "string");
-    return (0, _typeofJsDefault.default)(key) === "symbol" ? key : String(key);
+function toPropertyKey(t) {
+    var i = (0, _toPrimitiveJsDefault.default)(t, "string");
+    return "symbol" == (0, _typeofJsDefault.default)(i) ? i : i + "";
 }
-exports.default = _toPropertyKey;
+exports.default = toPropertyKey;
 
 },{"./typeof.js":"i7HWY","./toPrimitive.js":"497Dv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i7HWY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -40032,17 +40029,17 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _typeofJs = require("./typeof.js");
 var _typeofJsDefault = parcelHelpers.interopDefault(_typeofJs);
-function _toPrimitive(input, hint) {
-    if ((0, _typeofJsDefault.default)(input) !== "object" || input === null) return input;
-    var prim = input[Symbol.toPrimitive];
-    if (prim !== undefined) {
-        var res = prim.call(input, hint || "default");
-        if ((0, _typeofJsDefault.default)(res) !== "object") return res;
+function toPrimitive(t, r) {
+    if ("object" != (0, _typeofJsDefault.default)(t) || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+        var i = e.call(t, r || "default");
+        if ("object" != (0, _typeofJsDefault.default)(i)) return i;
         throw new TypeError("@@toPrimitive must return a primitive value.");
     }
-    return (hint === "string" ? String : Number)(input);
+    return ("string" === r ? String : Number)(t);
 }
-exports.default = _toPrimitive;
+exports.default = toPrimitive;
 
 },{"./typeof.js":"i7HWY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"isIsC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -40697,25 +40694,14 @@ class Profile extends (0, _reactDefault.default).Component {
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "relative",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        className: " font-sans text-xl",
-                        children: [
-                            "Name : ",
-                            this.state.userInfo.login
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/profileClass.js",
-                        lineNumber: 29,
-                        columnNumber: 13
-                    }, this)
+                    className: "relative"
                 }, void 0, false, {
                     fileName: "src/components/profileClass.js",
                     lineNumber: 28,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "absolute inset-y-50 right-0 h-[400px] w-[400px] mr-[250px] rounded-lg",
+                    className: "absolute inset-y-50 right-0 h-[400px] w-[400px] mt-[-80px] mr-[250px] rounded-lg",
                     src: this.state.userInfo.avatar_url
                 }, void 0, false, {
                     fileName: "src/components/profileClass.js",

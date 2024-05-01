@@ -274,6 +274,10 @@ img, video {
   margin-right: 250px;
 }
 
+.mt-\[-80px\] {
+  margin-top: -80px;
+}
+
 .flex {
   display: flex;
 }
