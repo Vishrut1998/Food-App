@@ -2968,8 +2968,6 @@ _c1 = About;
 const AppLayout = ()=>{
     _s();
     const [user, setUser] = (0, _react.useState)({
-        name: "Vishrut S",
-        email: "vishrut@gmail.com"
     });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
         store: (0, _storeDefault.default),
@@ -3006,7 +3004,7 @@ const AppLayout = ()=>{
         columnNumber: 10
     }, undefined);
 };
-_s(AppLayout, "qqYZst+1M3nVVl/Glj8m7beBqw8=");
+_s(AppLayout, "kJuvgkhKKtmG0FhOy7q7ATQAl1c=");
 _c2 = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
@@ -35494,46 +35492,6 @@ const Body = ()=>{
                         fileName: "src/components/body.js",
                         lineNumber: 52,
                         columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "focus:bg-teal-100 p-2 m-2",
-                        value: user.name,
-                        onChange: (e)=>setUser({
-                                ...user,
-                                name: e.target.value
-                            })
-                    }, void 0, false, {
-                        fileName: "src/components/body.js",
-                        lineNumber: 56,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "focus:bg-teal-100 p-2 m-2",
-                        value: user.email,
-                        onChange: (e)=>setUser({
-                                ...user,
-                                email: e.target.value
-                            })
-                    }, void 0, false, {
-                        fileName: "src/components/body.js",
-                        lineNumber: 60,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "px-5 py-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-lg",
-                        onClick: ()=>setModalOpen(true),
-                        children: "Test Text"
-                    }, void 0, false, {
-                        fileName: "src/components/body.js",
-                        lineNumber: 64,
-                        columnNumber: 13
-                    }, undefined),
-                    modalOpen && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _modalDefault.default), {
-                        setModalOpen: setModalOpen
-                    }, void 0, false, {
-                        fileName: "src/components/body.js",
-                        lineNumber: 64,
-                        columnNumber: 168
                     }, undefined)
                 ]
             }, void 0, true, {
@@ -35552,20 +35510,20 @@ const Body = ()=>{
                             user: user,
                             __source: {
                                 fileName: "src/components/body.js",
-                                lineNumber: 73,
+                                lineNumber: 79,
                                 columnNumber: 88
                             },
                             __self: undefined
                         })
                     }, restaurant.info.id, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 73,
+                        lineNumber: 79,
                         columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 70,
+                lineNumber: 76,
                 columnNumber: 9
             }, undefined)
         ]
@@ -40801,23 +40759,16 @@ const Footer = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 className: "p-3 m-10 font-bold text-gray-600",
-                children: [
-                    "This site is devloped by ",
-                    user.name,
-                    "."
-                ]
-            }, void 0, true, {
+                children: "This site is devloped by Vishrut Sharma."
+            }, void 0, false, {
                 fileName: "src/components/footer.js",
                 lineNumber: 9,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 className: "p-3 m-10 font-bold text-gray-600",
-                children: [
-                    "Contact at : ",
-                    user.email
-                ]
-            }, void 0, true, {
+                children: "Contact at : sharmavishrut1998@gmail.com"
+            }, void 0, false, {
                 fileName: "src/components/footer.js",
                 lineNumber: 10,
                 columnNumber: 9
