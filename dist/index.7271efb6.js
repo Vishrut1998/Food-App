@@ -27573,7 +27573,7 @@ $RefreshReg$(_c1, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/images/villa.png":"7B6NT","react-router-dom":"9xmpe","../utils/useOnline":"74Yls","../utils/UserContext":"c5vgB","react-redux":"bdVon","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/material/AppBar":"c3vaq","@mui/material/Box":"eQD0H","@mui/material/Typography":"faxSz","@mui/material/IconButton":"38BrD","@mui/material/Avatar":"hJMuL","../constants":"3huJa"}],"7B6NT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/images/villa.png":"7B6NT","react-router-dom":"9xmpe","../utils/useOnline":"74Yls","../utils/UserContext":"c5vgB","react-redux":"bdVon","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/material/AppBar":"c3vaq","@mui/material/Box":"eQD0H","@mui/material/Typography":"faxSz","@mui/material/Avatar":"hJMuL","@mui/material/IconButton":"38BrD","../constants":"3huJa"}],"7B6NT":[function(require,module,exports) {
 module.exports = require("bd5d40caf1f8ca82").getBundleURL("aXMci") + "villa.364c1de0.png" + "?" + Date.now();
 
 },{"bd5d40caf1f8ca82":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -49297,7 +49297,1030 @@ const typographyClasses = (0, _generateUtilityClassesDefault.default)("MuiTypogr
 ]);
 exports.default = typographyClasses;
 
-},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"38BrD":[function(require,module,exports) {
+},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hJMuL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _avatarDefault.default));
+parcelHelpers.export(exports, "avatarClasses", ()=>(0, _avatarClassesDefault.default));
+var _avatar = require("./Avatar");
+var _avatarDefault = parcelHelpers.interopDefault(_avatar);
+var _avatarClasses = require("./avatarClasses");
+var _avatarClassesDefault = parcelHelpers.interopDefault(_avatarClasses);
+parcelHelpers.exportAll(_avatarClasses, exports);
+"use client";
+
+},{"./Avatar":"1LteH","./avatarClasses":"9nfXd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1LteH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _composeClasses = require("@mui/utils/composeClasses");
+var _composeClassesDefault = parcelHelpers.interopDefault(_composeClasses);
+var _zeroStyled = require("../zero-styled");
+var _person = require("../internal/svg-icons/Person");
+var _personDefault = parcelHelpers.interopDefault(_person);
+var _avatarClasses = require("./avatarClasses");
+var _useSlot = require("../utils/useSlot");
+var _useSlotDefault = parcelHelpers.interopDefault(_useSlot);
+var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+const _excluded = [
+    "alt",
+    "children",
+    "className",
+    "component",
+    "slots",
+    "slotProps",
+    "imgProps",
+    "sizes",
+    "src",
+    "srcSet",
+    "variant"
+];
+const useThemeProps = (0, _zeroStyled.createUseThemeProps)("MuiAvatar");
+const useUtilityClasses = (ownerState)=>{
+    const { classes , variant , colorDefault  } = ownerState;
+    const slots = {
+        root: [
+            "root",
+            variant,
+            colorDefault && "colorDefault"
+        ],
+        img: [
+            "img"
+        ],
+        fallback: [
+            "fallback"
+        ]
+    };
+    return (0, _composeClassesDefault.default)(slots, (0, _avatarClasses.getAvatarUtilityClass), classes);
+};
+const AvatarRoot = (0, _zeroStyled.styled)("div", {
+    name: "MuiAvatar",
+    slot: "Root",
+    overridesResolver: (props, styles)=>{
+        const { ownerState  } = props;
+        return [
+            styles.root,
+            styles[ownerState.variant],
+            ownerState.colorDefault && styles.colorDefault
+        ];
+    }
+})(({ theme  })=>({
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexShrink: 0,
+        width: 40,
+        height: 40,
+        fontFamily: theme.typography.fontFamily,
+        fontSize: theme.typography.pxToRem(20),
+        lineHeight: 1,
+        borderRadius: "50%",
+        overflow: "hidden",
+        userSelect: "none",
+        variants: [
+            {
+                props: {
+                    variant: "rounded"
+                },
+                style: {
+                    borderRadius: (theme.vars || theme).shape.borderRadius
+                }
+            },
+            {
+                props: {
+                    variant: "square"
+                },
+                style: {
+                    borderRadius: 0
+                }
+            },
+            {
+                props: {
+                    colorDefault: true
+                },
+                style: (0, _extendsDefault.default)({
+                    color: (theme.vars || theme).palette.background.default
+                }, theme.vars ? {
+                    backgroundColor: theme.vars.palette.Avatar.defaultBg
+                } : (0, _extendsDefault.default)({
+                    backgroundColor: theme.palette.grey[400]
+                }, theme.applyStyles("dark", {
+                    backgroundColor: theme.palette.grey[600]
+                })))
+            }
+        ]
+    }));
+const AvatarImg = (0, _zeroStyled.styled)("img", {
+    name: "MuiAvatar",
+    slot: "Img",
+    overridesResolver: (props, styles)=>styles.img
+})({
+    width: "100%",
+    height: "100%",
+    textAlign: "center",
+    // Handle non-square image. The property isn't supported by IE11.
+    objectFit: "cover",
+    // Hide alt text.
+    color: "transparent",
+    // Hide the image broken icon, only works on Chrome.
+    textIndent: 10000
+});
+const AvatarFallback = (0, _zeroStyled.styled)((0, _personDefault.default), {
+    name: "MuiAvatar",
+    slot: "Fallback",
+    overridesResolver: (props, styles)=>styles.fallback
+})({
+    width: "75%",
+    height: "75%"
+});
+function useLoaded({ crossOrigin , referrerPolicy , src , srcSet  }) {
+    const [loaded, setLoaded] = _react.useState(false);
+    _react.useEffect(()=>{
+        if (!src && !srcSet) return undefined;
+        setLoaded(false);
+        let active = true;
+        const image = new Image();
+        image.onload = ()=>{
+            if (!active) return;
+            setLoaded("loaded");
+        };
+        image.onerror = ()=>{
+            if (!active) return;
+            setLoaded("error");
+        };
+        image.crossOrigin = crossOrigin;
+        image.referrerPolicy = referrerPolicy;
+        image.src = src;
+        if (srcSet) image.srcset = srcSet;
+        return ()=>{
+            active = false;
+        };
+    }, [
+        crossOrigin,
+        referrerPolicy,
+        src,
+        srcSet
+    ]);
+    return loaded;
+}
+const Avatar = /*#__PURE__*/ _react.forwardRef(function Avatar(inProps, ref) {
+    const props = useThemeProps({
+        props: inProps,
+        name: "MuiAvatar"
+    });
+    const { alt , children: childrenProp , className , component ="div" , slots ={} , slotProps ={} , imgProps , sizes , src , srcSet , variant ="circular"  } = props, other = (0, _objectWithoutPropertiesLooseDefault.default)(props, _excluded);
+    let children = null;
+    // Use a hook instead of onError on the img element to support server-side rendering.
+    const loaded = useLoaded((0, _extendsDefault.default)({}, imgProps, {
+        src,
+        srcSet
+    }));
+    const hasImg = src || srcSet;
+    const hasImgNotFailing = hasImg && loaded !== "error";
+    const ownerState = (0, _extendsDefault.default)({}, props, {
+        colorDefault: !hasImgNotFailing,
+        component,
+        variant
+    });
+    const classes = useUtilityClasses(ownerState);
+    const [ImgSlot, imgSlotProps] = (0, _useSlotDefault.default)("img", {
+        className: classes.img,
+        elementType: AvatarImg,
+        externalForwardedProps: {
+            slots,
+            slotProps: {
+                img: (0, _extendsDefault.default)({}, imgProps, slotProps.img)
+            }
+        },
+        additionalProps: {
+            alt,
+            src,
+            srcSet,
+            sizes
+        },
+        ownerState
+    });
+    if (hasImgNotFailing) children = /*#__PURE__*/ (0, _jsxRuntime.jsx)(ImgSlot, (0, _extendsDefault.default)({}, imgSlotProps));
+    else if (!!childrenProp || childrenProp === 0) children = childrenProp;
+    else if (hasImg && alt) children = alt[0];
+    else children = /*#__PURE__*/ (0, _jsxRuntime.jsx)(AvatarFallback, {
+        ownerState: ownerState,
+        className: classes.fallback
+    });
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(AvatarRoot, (0, _extendsDefault.default)({
+        as: component,
+        ownerState: ownerState,
+        className: (0, _clsxDefault.default)(classes.root, className),
+        ref: ref
+    }, other, {
+        children: children
+    }));
+});
+Avatar.propTypes /* remove-proptypes */  = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * Used in combination with `src` or `srcSet` to
+   * provide an alt attribute for the rendered `img` element.
+   */ alt: (0, _propTypesDefault.default).string,
+    /**
+   * Used to render icon or text elements inside the Avatar if `src` is not set.
+   * This can be an element, or just a string.
+   */ children: (0, _propTypesDefault.default).node,
+    /**
+   * Override or extend the styles applied to the component.
+   */ classes: (0, _propTypesDefault.default).object,
+    /**
+   * @ignore
+   */ className: (0, _propTypesDefault.default).string,
+    /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */ component: (0, _propTypesDefault.default).elementType,
+    /**
+   * [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes) applied to the `img` element if the component is used to display an image.
+   * It can be used to listen for the loading error event.
+   * @deprecated Use `slotProps.img` instead. This prop will be removed in v7. [How to migrate](/material-ui/migration/migrating-from-deprecated-apis/).
+   */ imgProps: (0, _propTypesDefault.default).object,
+    /**
+   * The `sizes` attribute for the `img` element.
+   */ sizes: (0, _propTypesDefault.default).string,
+    /**
+   * The props used for each slot inside.
+   * @default {}
+   */ slotProps: (0, _propTypesDefault.default).shape({
+        img: (0, _propTypesDefault.default).oneOfType([
+            (0, _propTypesDefault.default).func,
+            (0, _propTypesDefault.default).object
+        ])
+    }),
+    /**
+   * The components used for each slot inside.
+   * @default {}
+   */ slots: (0, _propTypesDefault.default).shape({
+        img: (0, _propTypesDefault.default).elementType
+    }),
+    /**
+   * The `src` attribute for the `img` element.
+   */ src: (0, _propTypesDefault.default).string,
+    /**
+   * The `srcSet` attribute for the `img` element.
+   * Use this attribute for responsive image display.
+   */ srcSet: (0, _propTypesDefault.default).string,
+    /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */ sx: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).oneOfType([
+            (0, _propTypesDefault.default).func,
+            (0, _propTypesDefault.default).object,
+            (0, _propTypesDefault.default).bool
+        ])),
+        (0, _propTypesDefault.default).func,
+        (0, _propTypesDefault.default).object
+    ]),
+    /**
+   * The shape of the avatar.
+   * @default 'circular'
+   */ variant: (0, _propTypesDefault.default /* @typescript-to-proptypes-ignore */ ).oneOfType([
+        (0, _propTypesDefault.default).oneOf([
+            "circular",
+            "rounded",
+            "square"
+        ]),
+        (0, _propTypesDefault.default).string
+    ])
+};
+exports.default = Avatar;
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@babel/runtime/helpers/esm/extends":"fTBFS","react":"21dqq","prop-types":"7wKI2","clsx":"gocd3","@mui/utils/composeClasses":"4kKno","../zero-styled":"e4lsd","../internal/svg-icons/Person":"4Q4Xc","./avatarClasses":"9nfXd","../utils/useSlot":"3wNlf","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e4lsd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "styled", ()=>(0, _styledDefault.default));
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+parcelHelpers.export(exports, "createUseThemeProps", ()=>createUseThemeProps);
+var _useThemeProps = require("../styles/useThemeProps");
+var _useThemePropsDefault = parcelHelpers.interopDefault(_useThemeProps);
+var _styled = require("../styles/styled");
+var _styledDefault = parcelHelpers.interopDefault(_styled);
+function createUseThemeProps(name) {
+    return 0, _useThemePropsDefault.default;
+}
+
+},{"../styles/useThemeProps":"dewuS","../styles/styled":"32xTg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4Q4Xc":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _createSvgIcon = require("../../utils/createSvgIcon");
+var _createSvgIconDefault = parcelHelpers.interopDefault(_createSvgIcon);
+/**
+ * @ignore - internal component.
+ */ var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+exports.default = (0, _createSvgIconDefault.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+    d: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+}), "Person");
+
+},{"react":"21dqq","../../utils/createSvgIcon":"f9XLK","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f9XLK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _react = require("react");
+var _svgIcon = require("../SvgIcon");
+var _svgIconDefault = parcelHelpers.interopDefault(_svgIcon);
+/**
+ * Private module reserved for @mui packages.
+ */ var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+function createSvgIcon(path, displayName) {
+    function Component(props, ref) {
+        return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _svgIconDefault.default), (0, _extendsDefault.default)({
+            "data-testid": `${displayName}Icon`,
+            ref: ref
+        }, props, {
+            children: path
+        }));
+    }
+    // Need to set `displayName` on the inner component for React.memo.
+    // React prior to 16.14 ignores `displayName` on the wrapper.
+    Component.displayName = `${displayName}Icon`;
+    Component.muiName = (0, _svgIconDefault.default).muiName;
+    return /*#__PURE__*/ _react.memo(/*#__PURE__*/ _react.forwardRef(Component));
+}
+exports.default = createSvgIcon;
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","react":"21dqq","../SvgIcon":"egDpG","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"egDpG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _svgIconDefault.default));
+parcelHelpers.export(exports, "svgIconClasses", ()=>(0, _svgIconClassesDefault.default));
+var _svgIcon = require("./SvgIcon");
+var _svgIconDefault = parcelHelpers.interopDefault(_svgIcon);
+var _svgIconClasses = require("./svgIconClasses");
+var _svgIconClassesDefault = parcelHelpers.interopDefault(_svgIconClasses);
+parcelHelpers.exportAll(_svgIconClasses, exports);
+"use client";
+
+},{"./SvgIcon":"hkHYU","./svgIconClasses":"bWKdX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hkHYU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _composeClasses = require("@mui/utils/composeClasses");
+var _composeClassesDefault = parcelHelpers.interopDefault(_composeClasses);
+var _capitalize = require("../utils/capitalize");
+var _capitalizeDefault = parcelHelpers.interopDefault(_capitalize);
+var _useThemeProps = require("../styles/useThemeProps");
+var _useThemePropsDefault = parcelHelpers.interopDefault(_useThemeProps);
+var _styled = require("../styles/styled");
+var _styledDefault = parcelHelpers.interopDefault(_styled);
+var _svgIconClasses = require("./svgIconClasses");
+var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+const _excluded = [
+    "children",
+    "className",
+    "color",
+    "component",
+    "fontSize",
+    "htmlColor",
+    "inheritViewBox",
+    "titleAccess",
+    "viewBox"
+];
+const useUtilityClasses = (ownerState)=>{
+    const { color , fontSize , classes  } = ownerState;
+    const slots = {
+        root: [
+            "root",
+            color !== "inherit" && `color${(0, _capitalizeDefault.default)(color)}`,
+            `fontSize${(0, _capitalizeDefault.default)(fontSize)}`
+        ]
+    };
+    return (0, _composeClassesDefault.default)(slots, (0, _svgIconClasses.getSvgIconUtilityClass), classes);
+};
+const SvgIconRoot = (0, _styledDefault.default)("svg", {
+    name: "MuiSvgIcon",
+    slot: "Root",
+    overridesResolver: (props, styles)=>{
+        const { ownerState  } = props;
+        return [
+            styles.root,
+            ownerState.color !== "inherit" && styles[`color${(0, _capitalizeDefault.default)(ownerState.color)}`],
+            styles[`fontSize${(0, _capitalizeDefault.default)(ownerState.fontSize)}`]
+        ];
+    }
+})(({ theme , ownerState  })=>{
+    var _theme$transitions, _theme$transitions$cr, _theme$transitions2, _theme$typography, _theme$typography$pxT, _theme$typography2, _theme$typography2$px, _theme$typography3, _theme$typography3$px, _palette$ownerState$c, _palette, _palette2, _palette3;
+    return {
+        userSelect: "none",
+        width: "1em",
+        height: "1em",
+        display: "inline-block",
+        // the <svg> will define the property that has `currentColor`
+        // for example heroicons uses fill="none" and stroke="currentColor"
+        fill: ownerState.hasSvgAsChild ? undefined : "currentColor",
+        flexShrink: 0,
+        transition: (_theme$transitions = theme.transitions) == null || (_theme$transitions$cr = _theme$transitions.create) == null ? void 0 : _theme$transitions$cr.call(_theme$transitions, "fill", {
+            duration: (_theme$transitions2 = theme.transitions) == null || (_theme$transitions2 = _theme$transitions2.duration) == null ? void 0 : _theme$transitions2.shorter
+        }),
+        fontSize: ({
+            inherit: "inherit",
+            small: ((_theme$typography = theme.typography) == null || (_theme$typography$pxT = _theme$typography.pxToRem) == null ? void 0 : _theme$typography$pxT.call(_theme$typography, 20)) || "1.25rem",
+            medium: ((_theme$typography2 = theme.typography) == null || (_theme$typography2$px = _theme$typography2.pxToRem) == null ? void 0 : _theme$typography2$px.call(_theme$typography2, 24)) || "1.5rem",
+            large: ((_theme$typography3 = theme.typography) == null || (_theme$typography3$px = _theme$typography3.pxToRem) == null ? void 0 : _theme$typography3$px.call(_theme$typography3, 35)) || "2.1875rem"
+        })[ownerState.fontSize],
+        // TODO v5 deprecate, v6 remove for sx
+        color: (_palette$ownerState$c = (_palette = (theme.vars || theme).palette) == null || (_palette = _palette[ownerState.color]) == null ? void 0 : _palette.main) != null ? _palette$ownerState$c : ({
+            action: (_palette2 = (theme.vars || theme).palette) == null || (_palette2 = _palette2.action) == null ? void 0 : _palette2.active,
+            disabled: (_palette3 = (theme.vars || theme).palette) == null || (_palette3 = _palette3.action) == null ? void 0 : _palette3.disabled,
+            inherit: undefined
+        })[ownerState.color]
+    };
+});
+const SvgIcon = /*#__PURE__*/ _react.forwardRef(function SvgIcon(inProps, ref) {
+    const props = (0, _useThemePropsDefault.default)({
+        props: inProps,
+        name: "MuiSvgIcon"
+    });
+    const { children , className , color ="inherit" , component ="svg" , fontSize ="medium" , htmlColor , inheritViewBox =false , titleAccess , viewBox ="0 0 24 24"  } = props, other = (0, _objectWithoutPropertiesLooseDefault.default)(props, _excluded);
+    const hasSvgAsChild = /*#__PURE__*/ _react.isValidElement(children) && children.type === "svg";
+    const ownerState = (0, _extendsDefault.default)({}, props, {
+        color,
+        component,
+        fontSize,
+        instanceFontSize: inProps.fontSize,
+        inheritViewBox,
+        viewBox,
+        hasSvgAsChild
+    });
+    const more = {};
+    if (!inheritViewBox) more.viewBox = viewBox;
+    const classes = useUtilityClasses(ownerState);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(SvgIconRoot, (0, _extendsDefault.default)({
+        as: component,
+        className: (0, _clsxDefault.default)(classes.root, className),
+        focusable: "false",
+        color: htmlColor,
+        "aria-hidden": titleAccess ? undefined : true,
+        role: titleAccess ? "img" : undefined,
+        ref: ref
+    }, more, other, hasSvgAsChild && children.props, {
+        ownerState: ownerState,
+        children: [
+            hasSvgAsChild ? children.props.children : children,
+            titleAccess ? /*#__PURE__*/ (0, _jsxRuntime.jsx)("title", {
+                children: titleAccess
+            }) : null
+        ]
+    }));
+});
+SvgIcon.propTypes /* remove-proptypes */  = {
+    // ┌────────────────────────────── Warning ──────────────────────────────┐
+    // │ These PropTypes are generated from the TypeScript type definitions. │
+    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
+    // └─────────────────────────────────────────────────────────────────────┘
+    /**
+   * Node passed into the SVG element.
+   */ children: (0, _propTypesDefault.default).node,
+    /**
+   * Override or extend the styles applied to the component.
+   */ classes: (0, _propTypesDefault.default).object,
+    /**
+   * @ignore
+   */ className: (0, _propTypesDefault.default).string,
+    /**
+   * The color of the component.
+   * It supports both default and custom theme colors, which can be added as shown in the
+   * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
+   * You can use the `htmlColor` prop to apply a color attribute to the SVG element.
+   * @default 'inherit'
+   */ color: (0, _propTypesDefault.default /* @typescript-to-proptypes-ignore */ ).oneOfType([
+        (0, _propTypesDefault.default).oneOf([
+            "inherit",
+            "action",
+            "disabled",
+            "primary",
+            "secondary",
+            "error",
+            "info",
+            "success",
+            "warning"
+        ]),
+        (0, _propTypesDefault.default).string
+    ]),
+    /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */ component: (0, _propTypesDefault.default).elementType,
+    /**
+   * The fontSize applied to the icon. Defaults to 24px, but can be configure to inherit font size.
+   * @default 'medium'
+   */ fontSize: (0, _propTypesDefault.default /* @typescript-to-proptypes-ignore */ ).oneOfType([
+        (0, _propTypesDefault.default).oneOf([
+            "inherit",
+            "large",
+            "medium",
+            "small"
+        ]),
+        (0, _propTypesDefault.default).string
+    ]),
+    /**
+   * Applies a color attribute to the SVG element.
+   */ htmlColor: (0, _propTypesDefault.default).string,
+    /**
+   * If `true`, the root node will inherit the custom `component`'s viewBox and the `viewBox`
+   * prop will be ignored.
+   * Useful when you want to reference a custom `component` and have `SvgIcon` pass that
+   * `component`'s viewBox to the root node.
+   * @default false
+   */ inheritViewBox: (0, _propTypesDefault.default).bool,
+    /**
+   * The shape-rendering attribute. The behavior of the different options is described on the
+   * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering).
+   * If you are having issues with blurry icons you should investigate this prop.
+   */ shapeRendering: (0, _propTypesDefault.default).string,
+    /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */ sx: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).oneOfType([
+            (0, _propTypesDefault.default).func,
+            (0, _propTypesDefault.default).object,
+            (0, _propTypesDefault.default).bool
+        ])),
+        (0, _propTypesDefault.default).func,
+        (0, _propTypesDefault.default).object
+    ]),
+    /**
+   * Provides a human-readable title for the element that contains it.
+   * https://www.w3.org/TR/SVG-access/#Equivalent
+   */ titleAccess: (0, _propTypesDefault.default).string,
+    /**
+   * Allows you to redefine what the coordinates without units mean inside an SVG element.
+   * For example, if the SVG element is 500 (width) by 200 (height),
+   * and you pass viewBox="0 0 50 20",
+   * this means that the coordinates inside the SVG will go from the top left corner (0,0)
+   * to bottom right (50,20) and each unit will be worth 10px.
+   * @default '0 0 24 24'
+   */ viewBox: (0, _propTypesDefault.default).string
+};
+SvgIcon.muiName = "SvgIcon";
+exports.default = SvgIcon;
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","prop-types":"7wKI2","clsx":"gocd3","@mui/utils/composeClasses":"4kKno","../utils/capitalize":"lwNtZ","../styles/useThemeProps":"dewuS","../styles/styled":"32xTg","./svgIconClasses":"bWKdX","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bWKdX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getSvgIconUtilityClass", ()=>getSvgIconUtilityClass);
+var _generateUtilityClasses = require("@mui/utils/generateUtilityClasses");
+var _generateUtilityClassesDefault = parcelHelpers.interopDefault(_generateUtilityClasses);
+var _generateUtilityClass = require("@mui/utils/generateUtilityClass");
+var _generateUtilityClassDefault = parcelHelpers.interopDefault(_generateUtilityClass);
+function getSvgIconUtilityClass(slot) {
+    return (0, _generateUtilityClassDefault.default)("MuiSvgIcon", slot);
+}
+const svgIconClasses = (0, _generateUtilityClassesDefault.default)("MuiSvgIcon", [
+    "root",
+    "colorPrimary",
+    "colorSecondary",
+    "colorAction",
+    "colorError",
+    "colorDisabled",
+    "fontSizeInherit",
+    "fontSizeSmall",
+    "fontSizeMedium",
+    "fontSizeLarge"
+]);
+exports.default = svgIconClasses;
+
+},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9nfXd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getAvatarUtilityClass", ()=>getAvatarUtilityClass);
+var _generateUtilityClasses = require("@mui/utils/generateUtilityClasses");
+var _generateUtilityClassesDefault = parcelHelpers.interopDefault(_generateUtilityClasses);
+var _generateUtilityClass = require("@mui/utils/generateUtilityClass");
+var _generateUtilityClassDefault = parcelHelpers.interopDefault(_generateUtilityClass);
+function getAvatarUtilityClass(slot) {
+    return (0, _generateUtilityClassDefault.default)("MuiAvatar", slot);
+}
+const avatarClasses = (0, _generateUtilityClassesDefault.default)("MuiAvatar", [
+    "root",
+    "colorDefault",
+    "circular",
+    "rounded",
+    "square",
+    "img",
+    "fallback"
+]);
+exports.default = avatarClasses;
+
+},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3wNlf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _useForkRef = require("@mui/utils/useForkRef");
+var _useForkRefDefault = parcelHelpers.interopDefault(_useForkRef);
+var _utils = require("@mui/base/utils");
+"use client";
+const _excluded = [
+    "className",
+    "elementType",
+    "ownerState",
+    "externalForwardedProps",
+    "getSlotOwnerState",
+    "internalForwardedProps"
+], _excluded2 = [
+    "component",
+    "slots",
+    "slotProps"
+], _excluded3 = [
+    "component"
+];
+function useSlot(/**
+ * The slot's name. All Material UI components should have `root` slot.
+ *
+ * If the name is `root`, the logic behaves differently from other slots,
+ * e.g. the `externalForwardedProps` are spread to `root` slot but not other slots.
+ */ name, parameters) {
+    const { className , elementType: initialElementType , ownerState , externalForwardedProps , getSlotOwnerState , internalForwardedProps  } = parameters, useSlotPropsParams = (0, _objectWithoutPropertiesLooseDefault.default)(parameters, _excluded);
+    const { component: rootComponent , slots ={
+        [name]: undefined
+    } , slotProps ={
+        [name]: undefined
+    }  } = externalForwardedProps, other = (0, _objectWithoutPropertiesLooseDefault.default)(externalForwardedProps, _excluded2);
+    const elementType = slots[name] || initialElementType;
+    // `slotProps[name]` can be a callback that receives the component's ownerState.
+    // `resolvedComponentsProps` is always a plain object.
+    const resolvedComponentsProps = (0, _utils.resolveComponentProps)(slotProps[name], ownerState);
+    const _mergeSlotProps = (0, _utils.mergeSlotProps)((0, _extendsDefault.default)({
+        className
+    }, useSlotPropsParams, {
+        externalForwardedProps: name === "root" ? other : undefined,
+        externalSlotProps: resolvedComponentsProps
+    })), { props: { component: slotComponent  } , internalRef  } = _mergeSlotProps, mergedProps = (0, _objectWithoutPropertiesLooseDefault.default)(_mergeSlotProps.props, _excluded3);
+    const ref = (0, _useForkRefDefault.default)(internalRef, resolvedComponentsProps == null ? void 0 : resolvedComponentsProps.ref, parameters.ref);
+    const slotOwnerState = getSlotOwnerState ? getSlotOwnerState(mergedProps) : {};
+    const finalOwnerState = (0, _extendsDefault.default)({}, ownerState, slotOwnerState);
+    const LeafComponent = name === "root" ? slotComponent || rootComponent : slotComponent;
+    const props = (0, _utils.appendOwnerState)(elementType, (0, _extendsDefault.default)({}, name === "root" && !rootComponent && !slots[name] && internalForwardedProps, name !== "root" && !slots[name] && internalForwardedProps, mergedProps, LeafComponent && {
+        as: LeafComponent
+    }, {
+        ref
+    }), finalOwnerState);
+    Object.keys(slotOwnerState).forEach((propName)=>{
+        delete props[propName];
+    });
+    return [
+        elementType,
+        props
+    ];
+}
+exports.default = useSlot;
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@mui/utils/useForkRef":"cAy1c","@mui/base/utils":"cgIce","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cgIce":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "appendOwnerState", ()=>(0, _appendOwnerState.appendOwnerState));
+parcelHelpers.export(exports, "areArraysEqual", ()=>(0, _areArraysEqual.areArraysEqual));
+parcelHelpers.export(exports, "ClassNameConfigurator", ()=>(0, _classNameConfigurator.ClassNameConfigurator));
+parcelHelpers.export(exports, "extractEventHandlers", ()=>(0, _extractEventHandlers.extractEventHandlers));
+parcelHelpers.export(exports, "isHostComponent", ()=>(0, _isHostComponent.isHostComponent));
+parcelHelpers.export(exports, "resolveComponentProps", ()=>(0, _resolveComponentProps.resolveComponentProps));
+parcelHelpers.export(exports, "useRootElementName", ()=>(0, _useRootElementName.useRootElementName));
+parcelHelpers.export(exports, "useSlotProps", ()=>(0, _useSlotProps.useSlotProps));
+parcelHelpers.export(exports, "mergeSlotProps", ()=>(0, _mergeSlotProps.mergeSlotProps));
+parcelHelpers.export(exports, "prepareForSlot", ()=>(0, _prepareForSlot.prepareForSlot));
+var _appendOwnerState = require("./appendOwnerState");
+var _areArraysEqual = require("./areArraysEqual");
+var _classNameConfigurator = require("./ClassNameConfigurator");
+var _extractEventHandlers = require("./extractEventHandlers");
+var _isHostComponent = require("./isHostComponent");
+var _resolveComponentProps = require("./resolveComponentProps");
+var _useRootElementName = require("./useRootElementName");
+var _useSlotProps = require("./useSlotProps");
+var _mergeSlotProps = require("./mergeSlotProps");
+var _prepareForSlot = require("./prepareForSlot");
+var _polymorphicComponent = require("./PolymorphicComponent");
+parcelHelpers.exportAll(_polymorphicComponent, exports);
+var _types = require("./types");
+parcelHelpers.exportAll(_types, exports);
+"use client";
+
+},{"./appendOwnerState":"hedlX","./areArraysEqual":"92wIQ","./ClassNameConfigurator":"ckzRU","./extractEventHandlers":"iYj1L","./isHostComponent":"b3wck","./resolveComponentProps":"bdeRV","./useRootElementName":"8kBIF","./useSlotProps":"5X0R6","./mergeSlotProps":"4QtyH","./prepareForSlot":"4jBQ4","./PolymorphicComponent":"7meW2","./types":"ez7qI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hedlX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Type of the ownerState based on the type of an element it applies to.
+ * This resolves to the provided OwnerState for React components and `undefined` for host components.
+ * Falls back to `OwnerState | undefined` when the exact type can't be determined in development time.
+ */ /**
+ * Appends the ownerState object to the props, merging with the existing one if necessary.
+ *
+ * @param elementType Type of the element that owns the `existingProps`. If the element is a DOM node or undefined, `ownerState` is not applied.
+ * @param otherProps Props of the element.
+ * @param ownerState
+ */ parcelHelpers.export(exports, "appendOwnerState", ()=>appendOwnerState);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _isHostComponent = require("./isHostComponent");
+function appendOwnerState(elementType, otherProps, ownerState) {
+    if (elementType === undefined || (0, _isHostComponent.isHostComponent)(elementType)) return otherProps;
+    return (0, _extendsDefault.default)({}, otherProps, {
+        ownerState: (0, _extendsDefault.default)({}, otherProps.ownerState, ownerState)
+    });
+}
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","./isHostComponent":"b3wck","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b3wck":[function(require,module,exports) {
+/**
+ * Determines if a given element is a DOM element name (i.e. not a React component).
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "isHostComponent", ()=>isHostComponent);
+function isHostComponent(element) {
+    return typeof element === "string";
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"92wIQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "areArraysEqual", ()=>areArraysEqual);
+function areArraysEqual(array1, array2, itemComparer = (a, b)=>a === b) {
+    return array1.length === array2.length && array1.every((value, index)=>itemComparer(value, array2[index]));
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ckzRU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * @ignore - internal hook.
+ *
+ * Wraps the `generateUtilityClass` function and controls how the classes are generated.
+ * Currently it only affects whether the classes are applied or not.
+ *
+ * @returns Function to be called with the `generateUtilityClass` function specific to a component to generate the classes.
+ */ parcelHelpers.export(exports, "useClassNamesOverride", ()=>useClassNamesOverride);
+/**
+ * Allows to configure the components within to not apply any built-in classes.
+ */ parcelHelpers.export(exports, "ClassNameConfigurator", ()=>ClassNameConfigurator);
+var _react = require("react");
+var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+const defaultContextValue = {
+    disableDefaultClasses: false
+};
+const ClassNameConfiguratorContext = /*#__PURE__*/ _react.createContext(defaultContextValue);
+ClassNameConfiguratorContext.displayName = "ClassNameConfiguratorContext";
+function useClassNamesOverride(generateUtilityClass) {
+    const { disableDefaultClasses  } = _react.useContext(ClassNameConfiguratorContext);
+    return (slot)=>{
+        if (disableDefaultClasses) return "";
+        return generateUtilityClass(slot);
+    };
+}
+function ClassNameConfigurator(props) {
+    const { disableDefaultClasses , children  } = props;
+    const contextValue = _react.useMemo(()=>({
+            disableDefaultClasses: disableDefaultClasses != null ? disableDefaultClasses : false
+        }), [
+        disableDefaultClasses
+    ]);
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(ClassNameConfiguratorContext.Provider, {
+        value: contextValue,
+        children: children
+    });
+}
+
+},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iYj1L":[function(require,module,exports) {
+/**
+ * Extracts event handlers from a given object.
+ * A prop is considered an event handler if it is a function and its name starts with `on`.
+ *
+ * @param object An object to extract event handlers from.
+ * @param excludeKeys An array of keys to exclude from the returned object.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "extractEventHandlers", ()=>extractEventHandlers);
+function extractEventHandlers(object, excludeKeys = []) {
+    if (object === undefined) return {};
+    const result = {};
+    Object.keys(object).filter((prop)=>prop.match(/^on[A-Z]/) && typeof object[prop] === "function" && !excludeKeys.includes(prop)).forEach((prop)=>{
+        result[prop] = object[prop];
+    });
+    return result;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bdeRV":[function(require,module,exports) {
+/**
+ * If `componentProps` is a function, calls it with the provided `ownerState`.
+ * Otherwise, just returns `componentProps`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "resolveComponentProps", ()=>resolveComponentProps);
+function resolveComponentProps(componentProps, ownerState, slotState) {
+    if (typeof componentProps === "function") return componentProps(ownerState, slotState);
+    return componentProps;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8kBIF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * @ignore - do not document.
+ *
+ * Use this function determine the host element correctly on the server (in a SSR context, for example Next.js)
+ */ parcelHelpers.export(exports, "useRootElementName", ()=>useRootElementName);
+var _react = require("react");
+"use client";
+function useRootElementName(parameters) {
+    const { rootElementName: rootElementNameProp = "" , componentName  } = parameters;
+    const [rootElementName, setRootElementName] = _react.useState(rootElementNameProp.toUpperCase());
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    _react.useEffect(()=>{
+        if (rootElementNameProp && rootElementName !== rootElementNameProp.toUpperCase()) console.error(`useRootElementName: the \`rootElementName\` prop of ${componentName ? `the ${componentName} component` : "a component"} expected the '${rootElementNameProp}' element, but a '${rootElementName.toLowerCase()}' was rendered instead`, "This may cause hydration issues in an SSR context, for example in a Next.js app");
+    }, [
+        rootElementNameProp,
+        rootElementName,
+        componentName
+    ]);
+    const updateRootElementName = _react.useCallback((instance)=>{
+        var _instance$tagName;
+        setRootElementName((_instance$tagName = instance == null ? void 0 : instance.tagName) != null ? _instance$tagName : "");
+    }, []);
+    return [
+        rootElementName,
+        updateRootElementName
+    ];
+}
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5X0R6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * @ignore - do not document.
+ * Builds the props to be passed into the slot of an unstyled component.
+ * It merges the internal props of the component with the ones supplied by the user, allowing to customize the behavior.
+ * If the slot component is not a host component, it also merges in the `ownerState`.
+ *
+ * @param parameters.getSlotProps - A function that returns the props to be passed to the slot component.
+ */ parcelHelpers.export(exports, "useSlotProps", ()=>useSlotProps);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _utils = require("@mui/utils");
+var _appendOwnerState = require("./appendOwnerState");
+var _mergeSlotProps = require("./mergeSlotProps");
+var _resolveComponentProps = require("./resolveComponentProps");
+"use client";
+const _excluded = [
+    "elementType",
+    "externalSlotProps",
+    "ownerState",
+    "skipResolvingSlotProps"
+];
+function useSlotProps(parameters) {
+    var _parameters$additiona;
+    const { elementType , externalSlotProps , ownerState , skipResolvingSlotProps =false  } = parameters, rest = (0, _objectWithoutPropertiesLooseDefault.default)(parameters, _excluded);
+    const resolvedComponentsProps = skipResolvingSlotProps ? {} : (0, _resolveComponentProps.resolveComponentProps)(externalSlotProps, ownerState);
+    const { props: mergedProps , internalRef  } = (0, _mergeSlotProps.mergeSlotProps)((0, _extendsDefault.default)({}, rest, {
+        externalSlotProps: resolvedComponentsProps
+    }));
+    const ref = (0, _utils.unstable_useForkRef)(internalRef, resolvedComponentsProps == null ? void 0 : resolvedComponentsProps.ref, (_parameters$additiona = parameters.additionalProps) == null ? void 0 : _parameters$additiona.ref);
+    const props = (0, _appendOwnerState.appendOwnerState)(elementType, (0, _extendsDefault.default)({}, mergedProps, {
+        ref
+    }), ownerState);
+    return props;
+}
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@mui/utils":"iivny","./appendOwnerState":"hedlX","./mergeSlotProps":"4QtyH","./resolveComponentProps":"bdeRV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4QtyH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Merges the slot component internal props (usually coming from a hook)
+ * with the externally provided ones.
+ *
+ * The merge order is (the latter overrides the former):
+ * 1. The internal props (specified as a getter function to work with get*Props hook result)
+ * 2. Additional props (specified internally on a Base UI component)
+ * 3. External props specified on the owner component. These should only be used on a root slot.
+ * 4. External props specified in the `slotProps.*` prop.
+ * 5. The `className` prop - combined from all the above.
+ * @param parameters
+ * @returns
+ */ parcelHelpers.export(exports, "mergeSlotProps", ()=>mergeSlotProps);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _extractEventHandlers = require("./extractEventHandlers");
+var _omitEventHandlers = require("./omitEventHandlers");
+function mergeSlotProps(parameters) {
+    const { getSlotProps , additionalProps , externalSlotProps , externalForwardedProps , className  } = parameters;
+    if (!getSlotProps) {
+        // The simpler case - getSlotProps is not defined, so no internal event handlers are defined,
+        // so we can simply merge all the props without having to worry about extracting event handlers.
+        const joinedClasses = (0, _clsxDefault.default)(additionalProps == null ? void 0 : additionalProps.className, className, externalForwardedProps == null ? void 0 : externalForwardedProps.className, externalSlotProps == null ? void 0 : externalSlotProps.className);
+        const mergedStyle = (0, _extendsDefault.default)({}, additionalProps == null ? void 0 : additionalProps.style, externalForwardedProps == null ? void 0 : externalForwardedProps.style, externalSlotProps == null ? void 0 : externalSlotProps.style);
+        const props = (0, _extendsDefault.default)({}, additionalProps, externalForwardedProps, externalSlotProps);
+        if (joinedClasses.length > 0) props.className = joinedClasses;
+        if (Object.keys(mergedStyle).length > 0) props.style = mergedStyle;
+        return {
+            props,
+            internalRef: undefined
+        };
+    }
+    // In this case, getSlotProps is responsible for calling the external event handlers.
+    // We don't need to include them in the merged props because of this.
+    const eventHandlers = (0, _extractEventHandlers.extractEventHandlers)((0, _extendsDefault.default)({}, externalForwardedProps, externalSlotProps));
+    const componentsPropsWithoutEventHandlers = (0, _omitEventHandlers.omitEventHandlers)(externalSlotProps);
+    const otherPropsWithoutEventHandlers = (0, _omitEventHandlers.omitEventHandlers)(externalForwardedProps);
+    const internalSlotProps = getSlotProps(eventHandlers);
+    // The order of classes is important here.
+    // Emotion (that we use in libraries consuming Base UI) depends on this order
+    // to properly override style. It requires the most important classes to be last
+    // (see https://github.com/mui/material-ui/pull/33205) for the related discussion.
+    const joinedClasses = (0, _clsxDefault.default)(internalSlotProps == null ? void 0 : internalSlotProps.className, additionalProps == null ? void 0 : additionalProps.className, className, externalForwardedProps == null ? void 0 : externalForwardedProps.className, externalSlotProps == null ? void 0 : externalSlotProps.className);
+    const mergedStyle = (0, _extendsDefault.default)({}, internalSlotProps == null ? void 0 : internalSlotProps.style, additionalProps == null ? void 0 : additionalProps.style, externalForwardedProps == null ? void 0 : externalForwardedProps.style, externalSlotProps == null ? void 0 : externalSlotProps.style);
+    const props = (0, _extendsDefault.default)({}, internalSlotProps, additionalProps, otherPropsWithoutEventHandlers, componentsPropsWithoutEventHandlers);
+    if (joinedClasses.length > 0) props.className = joinedClasses;
+    if (Object.keys(mergedStyle).length > 0) props.style = mergedStyle;
+    return {
+        props,
+        internalRef: internalSlotProps.ref
+    };
+}
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","clsx":"gocd3","./extractEventHandlers":"iYj1L","./omitEventHandlers":"h0aD1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h0aD1":[function(require,module,exports) {
+/**
+ * Removes event handlers from the given object.
+ * A field is considered an event handler if it is a function with a name beginning with `on`.
+ *
+ * @param object Object to remove event handlers from.
+ * @returns Object with event handlers removed.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "omitEventHandlers", ()=>omitEventHandlers);
+function omitEventHandlers(object) {
+    if (object === undefined) return {};
+    const result = {};
+    Object.keys(object).filter((prop)=>!(prop.match(/^on[A-Z]/) && typeof object[prop] === "function")).forEach((prop)=>{
+        result[prop] = object[prop];
+    });
+    return result;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4jBQ4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "prepareForSlot", ()=>prepareForSlot);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+const _excluded = [
+    "ownerState"
+];
+function prepareForSlot(Component) {
+    return /*#__PURE__*/ _react.forwardRef(function Slot(props, ref) {
+        const other = (0, _objectWithoutPropertiesLooseDefault.default)(props, _excluded);
+        return /*#__PURE__*/ _react.createElement(Component, (0, _extendsDefault.default)({}, other, {
+            ref
+        }));
+    });
+}
+
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7meW2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ez7qI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"38BrD":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>(0, _iconButtonDefault.default));
@@ -51386,1030 +52409,7 @@ const iconButtonClasses = (0, _generateUtilityClassesDefault.default)("MuiIconBu
 ]);
 exports.default = iconButtonClasses;
 
-},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hJMuL":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>(0, _avatarDefault.default));
-parcelHelpers.export(exports, "avatarClasses", ()=>(0, _avatarClassesDefault.default));
-var _avatar = require("./Avatar");
-var _avatarDefault = parcelHelpers.interopDefault(_avatar);
-var _avatarClasses = require("./avatarClasses");
-var _avatarClassesDefault = parcelHelpers.interopDefault(_avatarClasses);
-parcelHelpers.exportAll(_avatarClasses, exports);
-"use client";
-
-},{"./Avatar":"1LteH","./avatarClasses":"9nfXd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1LteH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _react = require("react");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _clsx = require("clsx");
-var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _composeClasses = require("@mui/utils/composeClasses");
-var _composeClassesDefault = parcelHelpers.interopDefault(_composeClasses);
-var _zeroStyled = require("../zero-styled");
-var _person = require("../internal/svg-icons/Person");
-var _personDefault = parcelHelpers.interopDefault(_person);
-var _avatarClasses = require("./avatarClasses");
-var _useSlot = require("../utils/useSlot");
-var _useSlotDefault = parcelHelpers.interopDefault(_useSlot);
-var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-const _excluded = [
-    "alt",
-    "children",
-    "className",
-    "component",
-    "slots",
-    "slotProps",
-    "imgProps",
-    "sizes",
-    "src",
-    "srcSet",
-    "variant"
-];
-const useThemeProps = (0, _zeroStyled.createUseThemeProps)("MuiAvatar");
-const useUtilityClasses = (ownerState)=>{
-    const { classes , variant , colorDefault  } = ownerState;
-    const slots = {
-        root: [
-            "root",
-            variant,
-            colorDefault && "colorDefault"
-        ],
-        img: [
-            "img"
-        ],
-        fallback: [
-            "fallback"
-        ]
-    };
-    return (0, _composeClassesDefault.default)(slots, (0, _avatarClasses.getAvatarUtilityClass), classes);
-};
-const AvatarRoot = (0, _zeroStyled.styled)("div", {
-    name: "MuiAvatar",
-    slot: "Root",
-    overridesResolver: (props, styles)=>{
-        const { ownerState  } = props;
-        return [
-            styles.root,
-            styles[ownerState.variant],
-            ownerState.colorDefault && styles.colorDefault
-        ];
-    }
-})(({ theme  })=>({
-        position: "relative",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-        width: 40,
-        height: 40,
-        fontFamily: theme.typography.fontFamily,
-        fontSize: theme.typography.pxToRem(20),
-        lineHeight: 1,
-        borderRadius: "50%",
-        overflow: "hidden",
-        userSelect: "none",
-        variants: [
-            {
-                props: {
-                    variant: "rounded"
-                },
-                style: {
-                    borderRadius: (theme.vars || theme).shape.borderRadius
-                }
-            },
-            {
-                props: {
-                    variant: "square"
-                },
-                style: {
-                    borderRadius: 0
-                }
-            },
-            {
-                props: {
-                    colorDefault: true
-                },
-                style: (0, _extendsDefault.default)({
-                    color: (theme.vars || theme).palette.background.default
-                }, theme.vars ? {
-                    backgroundColor: theme.vars.palette.Avatar.defaultBg
-                } : (0, _extendsDefault.default)({
-                    backgroundColor: theme.palette.grey[400]
-                }, theme.applyStyles("dark", {
-                    backgroundColor: theme.palette.grey[600]
-                })))
-            }
-        ]
-    }));
-const AvatarImg = (0, _zeroStyled.styled)("img", {
-    name: "MuiAvatar",
-    slot: "Img",
-    overridesResolver: (props, styles)=>styles.img
-})({
-    width: "100%",
-    height: "100%",
-    textAlign: "center",
-    // Handle non-square image. The property isn't supported by IE11.
-    objectFit: "cover",
-    // Hide alt text.
-    color: "transparent",
-    // Hide the image broken icon, only works on Chrome.
-    textIndent: 10000
-});
-const AvatarFallback = (0, _zeroStyled.styled)((0, _personDefault.default), {
-    name: "MuiAvatar",
-    slot: "Fallback",
-    overridesResolver: (props, styles)=>styles.fallback
-})({
-    width: "75%",
-    height: "75%"
-});
-function useLoaded({ crossOrigin , referrerPolicy , src , srcSet  }) {
-    const [loaded, setLoaded] = _react.useState(false);
-    _react.useEffect(()=>{
-        if (!src && !srcSet) return undefined;
-        setLoaded(false);
-        let active = true;
-        const image = new Image();
-        image.onload = ()=>{
-            if (!active) return;
-            setLoaded("loaded");
-        };
-        image.onerror = ()=>{
-            if (!active) return;
-            setLoaded("error");
-        };
-        image.crossOrigin = crossOrigin;
-        image.referrerPolicy = referrerPolicy;
-        image.src = src;
-        if (srcSet) image.srcset = srcSet;
-        return ()=>{
-            active = false;
-        };
-    }, [
-        crossOrigin,
-        referrerPolicy,
-        src,
-        srcSet
-    ]);
-    return loaded;
-}
-const Avatar = /*#__PURE__*/ _react.forwardRef(function Avatar(inProps, ref) {
-    const props = useThemeProps({
-        props: inProps,
-        name: "MuiAvatar"
-    });
-    const { alt , children: childrenProp , className , component ="div" , slots ={} , slotProps ={} , imgProps , sizes , src , srcSet , variant ="circular"  } = props, other = (0, _objectWithoutPropertiesLooseDefault.default)(props, _excluded);
-    let children = null;
-    // Use a hook instead of onError on the img element to support server-side rendering.
-    const loaded = useLoaded((0, _extendsDefault.default)({}, imgProps, {
-        src,
-        srcSet
-    }));
-    const hasImg = src || srcSet;
-    const hasImgNotFailing = hasImg && loaded !== "error";
-    const ownerState = (0, _extendsDefault.default)({}, props, {
-        colorDefault: !hasImgNotFailing,
-        component,
-        variant
-    });
-    const classes = useUtilityClasses(ownerState);
-    const [ImgSlot, imgSlotProps] = (0, _useSlotDefault.default)("img", {
-        className: classes.img,
-        elementType: AvatarImg,
-        externalForwardedProps: {
-            slots,
-            slotProps: {
-                img: (0, _extendsDefault.default)({}, imgProps, slotProps.img)
-            }
-        },
-        additionalProps: {
-            alt,
-            src,
-            srcSet,
-            sizes
-        },
-        ownerState
-    });
-    if (hasImgNotFailing) children = /*#__PURE__*/ (0, _jsxRuntime.jsx)(ImgSlot, (0, _extendsDefault.default)({}, imgSlotProps));
-    else if (!!childrenProp || childrenProp === 0) children = childrenProp;
-    else if (hasImg && alt) children = alt[0];
-    else children = /*#__PURE__*/ (0, _jsxRuntime.jsx)(AvatarFallback, {
-        ownerState: ownerState,
-        className: classes.fallback
-    });
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(AvatarRoot, (0, _extendsDefault.default)({
-        as: component,
-        ownerState: ownerState,
-        className: (0, _clsxDefault.default)(classes.root, className),
-        ref: ref
-    }, other, {
-        children: children
-    }));
-});
-Avatar.propTypes /* remove-proptypes */  = {
-    // ┌────────────────────────────── Warning ──────────────────────────────┐
-    // │ These PropTypes are generated from the TypeScript type definitions. │
-    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
-    // └─────────────────────────────────────────────────────────────────────┘
-    /**
-   * Used in combination with `src` or `srcSet` to
-   * provide an alt attribute for the rendered `img` element.
-   */ alt: (0, _propTypesDefault.default).string,
-    /**
-   * Used to render icon or text elements inside the Avatar if `src` is not set.
-   * This can be an element, or just a string.
-   */ children: (0, _propTypesDefault.default).node,
-    /**
-   * Override or extend the styles applied to the component.
-   */ classes: (0, _propTypesDefault.default).object,
-    /**
-   * @ignore
-   */ className: (0, _propTypesDefault.default).string,
-    /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */ component: (0, _propTypesDefault.default).elementType,
-    /**
-   * [Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes) applied to the `img` element if the component is used to display an image.
-   * It can be used to listen for the loading error event.
-   * @deprecated Use `slotProps.img` instead. This prop will be removed in v7. [How to migrate](/material-ui/migration/migrating-from-deprecated-apis/).
-   */ imgProps: (0, _propTypesDefault.default).object,
-    /**
-   * The `sizes` attribute for the `img` element.
-   */ sizes: (0, _propTypesDefault.default).string,
-    /**
-   * The props used for each slot inside.
-   * @default {}
-   */ slotProps: (0, _propTypesDefault.default).shape({
-        img: (0, _propTypesDefault.default).oneOfType([
-            (0, _propTypesDefault.default).func,
-            (0, _propTypesDefault.default).object
-        ])
-    }),
-    /**
-   * The components used for each slot inside.
-   * @default {}
-   */ slots: (0, _propTypesDefault.default).shape({
-        img: (0, _propTypesDefault.default).elementType
-    }),
-    /**
-   * The `src` attribute for the `img` element.
-   */ src: (0, _propTypesDefault.default).string,
-    /**
-   * The `srcSet` attribute for the `img` element.
-   * Use this attribute for responsive image display.
-   */ srcSet: (0, _propTypesDefault.default).string,
-    /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */ sx: (0, _propTypesDefault.default).oneOfType([
-        (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).oneOfType([
-            (0, _propTypesDefault.default).func,
-            (0, _propTypesDefault.default).object,
-            (0, _propTypesDefault.default).bool
-        ])),
-        (0, _propTypesDefault.default).func,
-        (0, _propTypesDefault.default).object
-    ]),
-    /**
-   * The shape of the avatar.
-   * @default 'circular'
-   */ variant: (0, _propTypesDefault.default /* @typescript-to-proptypes-ignore */ ).oneOfType([
-        (0, _propTypesDefault.default).oneOf([
-            "circular",
-            "rounded",
-            "square"
-        ]),
-        (0, _propTypesDefault.default).string
-    ])
-};
-exports.default = Avatar;
-
-},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@babel/runtime/helpers/esm/extends":"fTBFS","react":"21dqq","prop-types":"7wKI2","clsx":"gocd3","@mui/utils/composeClasses":"4kKno","../zero-styled":"e4lsd","../internal/svg-icons/Person":"4Q4Xc","./avatarClasses":"9nfXd","../utils/useSlot":"3wNlf","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e4lsd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "styled", ()=>(0, _styledDefault.default));
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-parcelHelpers.export(exports, "createUseThemeProps", ()=>createUseThemeProps);
-var _useThemeProps = require("../styles/useThemeProps");
-var _useThemePropsDefault = parcelHelpers.interopDefault(_useThemeProps);
-var _styled = require("../styles/styled");
-var _styledDefault = parcelHelpers.interopDefault(_styled);
-function createUseThemeProps(name) {
-    return 0, _useThemePropsDefault.default;
-}
-
-},{"../styles/useThemeProps":"dewuS","../styles/styled":"32xTg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4Q4Xc":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _createSvgIcon = require("../../utils/createSvgIcon");
-var _createSvgIconDefault = parcelHelpers.interopDefault(_createSvgIcon);
-/**
- * @ignore - internal component.
- */ var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-exports.default = (0, _createSvgIconDefault.default)(/*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
-    d: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-}), "Person");
-
-},{"react":"21dqq","../../utils/createSvgIcon":"f9XLK","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f9XLK":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _react = require("react");
-var _svgIcon = require("../SvgIcon");
-var _svgIconDefault = parcelHelpers.interopDefault(_svgIcon);
-/**
- * Private module reserved for @mui packages.
- */ var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-function createSvgIcon(path, displayName) {
-    function Component(props, ref) {
-        return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _svgIconDefault.default), (0, _extendsDefault.default)({
-            "data-testid": `${displayName}Icon`,
-            ref: ref
-        }, props, {
-            children: path
-        }));
-    }
-    // Need to set `displayName` on the inner component for React.memo.
-    // React prior to 16.14 ignores `displayName` on the wrapper.
-    Component.displayName = `${displayName}Icon`;
-    Component.muiName = (0, _svgIconDefault.default).muiName;
-    return /*#__PURE__*/ _react.memo(/*#__PURE__*/ _react.forwardRef(Component));
-}
-exports.default = createSvgIcon;
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","react":"21dqq","../SvgIcon":"egDpG","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"egDpG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>(0, _svgIconDefault.default));
-parcelHelpers.export(exports, "svgIconClasses", ()=>(0, _svgIconClassesDefault.default));
-var _svgIcon = require("./SvgIcon");
-var _svgIconDefault = parcelHelpers.interopDefault(_svgIcon);
-var _svgIconClasses = require("./svgIconClasses");
-var _svgIconClassesDefault = parcelHelpers.interopDefault(_svgIconClasses);
-parcelHelpers.exportAll(_svgIconClasses, exports);
-"use client";
-
-},{"./SvgIcon":"hkHYU","./svgIconClasses":"bWKdX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hkHYU":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _react = require("react");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _clsx = require("clsx");
-var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _composeClasses = require("@mui/utils/composeClasses");
-var _composeClassesDefault = parcelHelpers.interopDefault(_composeClasses);
-var _capitalize = require("../utils/capitalize");
-var _capitalizeDefault = parcelHelpers.interopDefault(_capitalize);
-var _useThemeProps = require("../styles/useThemeProps");
-var _useThemePropsDefault = parcelHelpers.interopDefault(_useThemeProps);
-var _styled = require("../styles/styled");
-var _styledDefault = parcelHelpers.interopDefault(_styled);
-var _svgIconClasses = require("./svgIconClasses");
-var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-const _excluded = [
-    "children",
-    "className",
-    "color",
-    "component",
-    "fontSize",
-    "htmlColor",
-    "inheritViewBox",
-    "titleAccess",
-    "viewBox"
-];
-const useUtilityClasses = (ownerState)=>{
-    const { color , fontSize , classes  } = ownerState;
-    const slots = {
-        root: [
-            "root",
-            color !== "inherit" && `color${(0, _capitalizeDefault.default)(color)}`,
-            `fontSize${(0, _capitalizeDefault.default)(fontSize)}`
-        ]
-    };
-    return (0, _composeClassesDefault.default)(slots, (0, _svgIconClasses.getSvgIconUtilityClass), classes);
-};
-const SvgIconRoot = (0, _styledDefault.default)("svg", {
-    name: "MuiSvgIcon",
-    slot: "Root",
-    overridesResolver: (props, styles)=>{
-        const { ownerState  } = props;
-        return [
-            styles.root,
-            ownerState.color !== "inherit" && styles[`color${(0, _capitalizeDefault.default)(ownerState.color)}`],
-            styles[`fontSize${(0, _capitalizeDefault.default)(ownerState.fontSize)}`]
-        ];
-    }
-})(({ theme , ownerState  })=>{
-    var _theme$transitions, _theme$transitions$cr, _theme$transitions2, _theme$typography, _theme$typography$pxT, _theme$typography2, _theme$typography2$px, _theme$typography3, _theme$typography3$px, _palette$ownerState$c, _palette, _palette2, _palette3;
-    return {
-        userSelect: "none",
-        width: "1em",
-        height: "1em",
-        display: "inline-block",
-        // the <svg> will define the property that has `currentColor`
-        // for example heroicons uses fill="none" and stroke="currentColor"
-        fill: ownerState.hasSvgAsChild ? undefined : "currentColor",
-        flexShrink: 0,
-        transition: (_theme$transitions = theme.transitions) == null || (_theme$transitions$cr = _theme$transitions.create) == null ? void 0 : _theme$transitions$cr.call(_theme$transitions, "fill", {
-            duration: (_theme$transitions2 = theme.transitions) == null || (_theme$transitions2 = _theme$transitions2.duration) == null ? void 0 : _theme$transitions2.shorter
-        }),
-        fontSize: ({
-            inherit: "inherit",
-            small: ((_theme$typography = theme.typography) == null || (_theme$typography$pxT = _theme$typography.pxToRem) == null ? void 0 : _theme$typography$pxT.call(_theme$typography, 20)) || "1.25rem",
-            medium: ((_theme$typography2 = theme.typography) == null || (_theme$typography2$px = _theme$typography2.pxToRem) == null ? void 0 : _theme$typography2$px.call(_theme$typography2, 24)) || "1.5rem",
-            large: ((_theme$typography3 = theme.typography) == null || (_theme$typography3$px = _theme$typography3.pxToRem) == null ? void 0 : _theme$typography3$px.call(_theme$typography3, 35)) || "2.1875rem"
-        })[ownerState.fontSize],
-        // TODO v5 deprecate, v6 remove for sx
-        color: (_palette$ownerState$c = (_palette = (theme.vars || theme).palette) == null || (_palette = _palette[ownerState.color]) == null ? void 0 : _palette.main) != null ? _palette$ownerState$c : ({
-            action: (_palette2 = (theme.vars || theme).palette) == null || (_palette2 = _palette2.action) == null ? void 0 : _palette2.active,
-            disabled: (_palette3 = (theme.vars || theme).palette) == null || (_palette3 = _palette3.action) == null ? void 0 : _palette3.disabled,
-            inherit: undefined
-        })[ownerState.color]
-    };
-});
-const SvgIcon = /*#__PURE__*/ _react.forwardRef(function SvgIcon(inProps, ref) {
-    const props = (0, _useThemePropsDefault.default)({
-        props: inProps,
-        name: "MuiSvgIcon"
-    });
-    const { children , className , color ="inherit" , component ="svg" , fontSize ="medium" , htmlColor , inheritViewBox =false , titleAccess , viewBox ="0 0 24 24"  } = props, other = (0, _objectWithoutPropertiesLooseDefault.default)(props, _excluded);
-    const hasSvgAsChild = /*#__PURE__*/ _react.isValidElement(children) && children.type === "svg";
-    const ownerState = (0, _extendsDefault.default)({}, props, {
-        color,
-        component,
-        fontSize,
-        instanceFontSize: inProps.fontSize,
-        inheritViewBox,
-        viewBox,
-        hasSvgAsChild
-    });
-    const more = {};
-    if (!inheritViewBox) more.viewBox = viewBox;
-    const classes = useUtilityClasses(ownerState);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(SvgIconRoot, (0, _extendsDefault.default)({
-        as: component,
-        className: (0, _clsxDefault.default)(classes.root, className),
-        focusable: "false",
-        color: htmlColor,
-        "aria-hidden": titleAccess ? undefined : true,
-        role: titleAccess ? "img" : undefined,
-        ref: ref
-    }, more, other, hasSvgAsChild && children.props, {
-        ownerState: ownerState,
-        children: [
-            hasSvgAsChild ? children.props.children : children,
-            titleAccess ? /*#__PURE__*/ (0, _jsxRuntime.jsx)("title", {
-                children: titleAccess
-            }) : null
-        ]
-    }));
-});
-SvgIcon.propTypes /* remove-proptypes */  = {
-    // ┌────────────────────────────── Warning ──────────────────────────────┐
-    // │ These PropTypes are generated from the TypeScript type definitions. │
-    // │    To update them, edit the d.ts file and run `pnpm proptypes`.     │
-    // └─────────────────────────────────────────────────────────────────────┘
-    /**
-   * Node passed into the SVG element.
-   */ children: (0, _propTypesDefault.default).node,
-    /**
-   * Override or extend the styles applied to the component.
-   */ classes: (0, _propTypesDefault.default).object,
-    /**
-   * @ignore
-   */ className: (0, _propTypesDefault.default).string,
-    /**
-   * The color of the component.
-   * It supports both default and custom theme colors, which can be added as shown in the
-   * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
-   * You can use the `htmlColor` prop to apply a color attribute to the SVG element.
-   * @default 'inherit'
-   */ color: (0, _propTypesDefault.default /* @typescript-to-proptypes-ignore */ ).oneOfType([
-        (0, _propTypesDefault.default).oneOf([
-            "inherit",
-            "action",
-            "disabled",
-            "primary",
-            "secondary",
-            "error",
-            "info",
-            "success",
-            "warning"
-        ]),
-        (0, _propTypesDefault.default).string
-    ]),
-    /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */ component: (0, _propTypesDefault.default).elementType,
-    /**
-   * The fontSize applied to the icon. Defaults to 24px, but can be configure to inherit font size.
-   * @default 'medium'
-   */ fontSize: (0, _propTypesDefault.default /* @typescript-to-proptypes-ignore */ ).oneOfType([
-        (0, _propTypesDefault.default).oneOf([
-            "inherit",
-            "large",
-            "medium",
-            "small"
-        ]),
-        (0, _propTypesDefault.default).string
-    ]),
-    /**
-   * Applies a color attribute to the SVG element.
-   */ htmlColor: (0, _propTypesDefault.default).string,
-    /**
-   * If `true`, the root node will inherit the custom `component`'s viewBox and the `viewBox`
-   * prop will be ignored.
-   * Useful when you want to reference a custom `component` and have `SvgIcon` pass that
-   * `component`'s viewBox to the root node.
-   * @default false
-   */ inheritViewBox: (0, _propTypesDefault.default).bool,
-    /**
-   * The shape-rendering attribute. The behavior of the different options is described on the
-   * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering).
-   * If you are having issues with blurry icons you should investigate this prop.
-   */ shapeRendering: (0, _propTypesDefault.default).string,
-    /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */ sx: (0, _propTypesDefault.default).oneOfType([
-        (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).oneOfType([
-            (0, _propTypesDefault.default).func,
-            (0, _propTypesDefault.default).object,
-            (0, _propTypesDefault.default).bool
-        ])),
-        (0, _propTypesDefault.default).func,
-        (0, _propTypesDefault.default).object
-    ]),
-    /**
-   * Provides a human-readable title for the element that contains it.
-   * https://www.w3.org/TR/SVG-access/#Equivalent
-   */ titleAccess: (0, _propTypesDefault.default).string,
-    /**
-   * Allows you to redefine what the coordinates without units mean inside an SVG element.
-   * For example, if the SVG element is 500 (width) by 200 (height),
-   * and you pass viewBox="0 0 50 20",
-   * this means that the coordinates inside the SVG will go from the top left corner (0,0)
-   * to bottom right (50,20) and each unit will be worth 10px.
-   * @default '0 0 24 24'
-   */ viewBox: (0, _propTypesDefault.default).string
-};
-SvgIcon.muiName = "SvgIcon";
-exports.default = SvgIcon;
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","prop-types":"7wKI2","clsx":"gocd3","@mui/utils/composeClasses":"4kKno","../utils/capitalize":"lwNtZ","../styles/useThemeProps":"dewuS","../styles/styled":"32xTg","./svgIconClasses":"bWKdX","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bWKdX":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getSvgIconUtilityClass", ()=>getSvgIconUtilityClass);
-var _generateUtilityClasses = require("@mui/utils/generateUtilityClasses");
-var _generateUtilityClassesDefault = parcelHelpers.interopDefault(_generateUtilityClasses);
-var _generateUtilityClass = require("@mui/utils/generateUtilityClass");
-var _generateUtilityClassDefault = parcelHelpers.interopDefault(_generateUtilityClass);
-function getSvgIconUtilityClass(slot) {
-    return (0, _generateUtilityClassDefault.default)("MuiSvgIcon", slot);
-}
-const svgIconClasses = (0, _generateUtilityClassesDefault.default)("MuiSvgIcon", [
-    "root",
-    "colorPrimary",
-    "colorSecondary",
-    "colorAction",
-    "colorError",
-    "colorDisabled",
-    "fontSizeInherit",
-    "fontSizeSmall",
-    "fontSizeMedium",
-    "fontSizeLarge"
-]);
-exports.default = svgIconClasses;
-
-},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9nfXd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getAvatarUtilityClass", ()=>getAvatarUtilityClass);
-var _generateUtilityClasses = require("@mui/utils/generateUtilityClasses");
-var _generateUtilityClassesDefault = parcelHelpers.interopDefault(_generateUtilityClasses);
-var _generateUtilityClass = require("@mui/utils/generateUtilityClass");
-var _generateUtilityClassDefault = parcelHelpers.interopDefault(_generateUtilityClass);
-function getAvatarUtilityClass(slot) {
-    return (0, _generateUtilityClassDefault.default)("MuiAvatar", slot);
-}
-const avatarClasses = (0, _generateUtilityClassesDefault.default)("MuiAvatar", [
-    "root",
-    "colorDefault",
-    "circular",
-    "rounded",
-    "square",
-    "img",
-    "fallback"
-]);
-exports.default = avatarClasses;
-
-},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3wNlf":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _useForkRef = require("@mui/utils/useForkRef");
-var _useForkRefDefault = parcelHelpers.interopDefault(_useForkRef);
-var _utils = require("@mui/base/utils");
-"use client";
-const _excluded = [
-    "className",
-    "elementType",
-    "ownerState",
-    "externalForwardedProps",
-    "getSlotOwnerState",
-    "internalForwardedProps"
-], _excluded2 = [
-    "component",
-    "slots",
-    "slotProps"
-], _excluded3 = [
-    "component"
-];
-function useSlot(/**
- * The slot's name. All Material UI components should have `root` slot.
- *
- * If the name is `root`, the logic behaves differently from other slots,
- * e.g. the `externalForwardedProps` are spread to `root` slot but not other slots.
- */ name, parameters) {
-    const { className , elementType: initialElementType , ownerState , externalForwardedProps , getSlotOwnerState , internalForwardedProps  } = parameters, useSlotPropsParams = (0, _objectWithoutPropertiesLooseDefault.default)(parameters, _excluded);
-    const { component: rootComponent , slots ={
-        [name]: undefined
-    } , slotProps ={
-        [name]: undefined
-    }  } = externalForwardedProps, other = (0, _objectWithoutPropertiesLooseDefault.default)(externalForwardedProps, _excluded2);
-    const elementType = slots[name] || initialElementType;
-    // `slotProps[name]` can be a callback that receives the component's ownerState.
-    // `resolvedComponentsProps` is always a plain object.
-    const resolvedComponentsProps = (0, _utils.resolveComponentProps)(slotProps[name], ownerState);
-    const _mergeSlotProps = (0, _utils.mergeSlotProps)((0, _extendsDefault.default)({
-        className
-    }, useSlotPropsParams, {
-        externalForwardedProps: name === "root" ? other : undefined,
-        externalSlotProps: resolvedComponentsProps
-    })), { props: { component: slotComponent  } , internalRef  } = _mergeSlotProps, mergedProps = (0, _objectWithoutPropertiesLooseDefault.default)(_mergeSlotProps.props, _excluded3);
-    const ref = (0, _useForkRefDefault.default)(internalRef, resolvedComponentsProps == null ? void 0 : resolvedComponentsProps.ref, parameters.ref);
-    const slotOwnerState = getSlotOwnerState ? getSlotOwnerState(mergedProps) : {};
-    const finalOwnerState = (0, _extendsDefault.default)({}, ownerState, slotOwnerState);
-    const LeafComponent = name === "root" ? slotComponent || rootComponent : slotComponent;
-    const props = (0, _utils.appendOwnerState)(elementType, (0, _extendsDefault.default)({}, name === "root" && !rootComponent && !slots[name] && internalForwardedProps, name !== "root" && !slots[name] && internalForwardedProps, mergedProps, LeafComponent && {
-        as: LeafComponent
-    }, {
-        ref
-    }), finalOwnerState);
-    Object.keys(slotOwnerState).forEach((propName)=>{
-        delete props[propName];
-    });
-    return [
-        elementType,
-        props
-    ];
-}
-exports.default = useSlot;
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@mui/utils/useForkRef":"cAy1c","@mui/base/utils":"cgIce","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cgIce":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "appendOwnerState", ()=>(0, _appendOwnerState.appendOwnerState));
-parcelHelpers.export(exports, "areArraysEqual", ()=>(0, _areArraysEqual.areArraysEqual));
-parcelHelpers.export(exports, "ClassNameConfigurator", ()=>(0, _classNameConfigurator.ClassNameConfigurator));
-parcelHelpers.export(exports, "extractEventHandlers", ()=>(0, _extractEventHandlers.extractEventHandlers));
-parcelHelpers.export(exports, "isHostComponent", ()=>(0, _isHostComponent.isHostComponent));
-parcelHelpers.export(exports, "resolveComponentProps", ()=>(0, _resolveComponentProps.resolveComponentProps));
-parcelHelpers.export(exports, "useRootElementName", ()=>(0, _useRootElementName.useRootElementName));
-parcelHelpers.export(exports, "useSlotProps", ()=>(0, _useSlotProps.useSlotProps));
-parcelHelpers.export(exports, "mergeSlotProps", ()=>(0, _mergeSlotProps.mergeSlotProps));
-parcelHelpers.export(exports, "prepareForSlot", ()=>(0, _prepareForSlot.prepareForSlot));
-var _appendOwnerState = require("./appendOwnerState");
-var _areArraysEqual = require("./areArraysEqual");
-var _classNameConfigurator = require("./ClassNameConfigurator");
-var _extractEventHandlers = require("./extractEventHandlers");
-var _isHostComponent = require("./isHostComponent");
-var _resolveComponentProps = require("./resolveComponentProps");
-var _useRootElementName = require("./useRootElementName");
-var _useSlotProps = require("./useSlotProps");
-var _mergeSlotProps = require("./mergeSlotProps");
-var _prepareForSlot = require("./prepareForSlot");
-var _polymorphicComponent = require("./PolymorphicComponent");
-parcelHelpers.exportAll(_polymorphicComponent, exports);
-var _types = require("./types");
-parcelHelpers.exportAll(_types, exports);
-"use client";
-
-},{"./appendOwnerState":"hedlX","./areArraysEqual":"92wIQ","./ClassNameConfigurator":"ckzRU","./extractEventHandlers":"iYj1L","./isHostComponent":"b3wck","./resolveComponentProps":"bdeRV","./useRootElementName":"8kBIF","./useSlotProps":"5X0R6","./mergeSlotProps":"4QtyH","./prepareForSlot":"4jBQ4","./PolymorphicComponent":"7meW2","./types":"ez7qI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hedlX":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Type of the ownerState based on the type of an element it applies to.
- * This resolves to the provided OwnerState for React components and `undefined` for host components.
- * Falls back to `OwnerState | undefined` when the exact type can't be determined in development time.
- */ /**
- * Appends the ownerState object to the props, merging with the existing one if necessary.
- *
- * @param elementType Type of the element that owns the `existingProps`. If the element is a DOM node or undefined, `ownerState` is not applied.
- * @param otherProps Props of the element.
- * @param ownerState
- */ parcelHelpers.export(exports, "appendOwnerState", ()=>appendOwnerState);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _isHostComponent = require("./isHostComponent");
-function appendOwnerState(elementType, otherProps, ownerState) {
-    if (elementType === undefined || (0, _isHostComponent.isHostComponent)(elementType)) return otherProps;
-    return (0, _extendsDefault.default)({}, otherProps, {
-        ownerState: (0, _extendsDefault.default)({}, otherProps.ownerState, ownerState)
-    });
-}
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","./isHostComponent":"b3wck","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b3wck":[function(require,module,exports) {
-/**
- * Determines if a given element is a DOM element name (i.e. not a React component).
- */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "isHostComponent", ()=>isHostComponent);
-function isHostComponent(element) {
-    return typeof element === "string";
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"92wIQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "areArraysEqual", ()=>areArraysEqual);
-function areArraysEqual(array1, array2, itemComparer = (a, b)=>a === b) {
-    return array1.length === array2.length && array1.every((value, index)=>itemComparer(value, array2[index]));
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ckzRU":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * @ignore - internal hook.
- *
- * Wraps the `generateUtilityClass` function and controls how the classes are generated.
- * Currently it only affects whether the classes are applied or not.
- *
- * @returns Function to be called with the `generateUtilityClass` function specific to a component to generate the classes.
- */ parcelHelpers.export(exports, "useClassNamesOverride", ()=>useClassNamesOverride);
-/**
- * Allows to configure the components within to not apply any built-in classes.
- */ parcelHelpers.export(exports, "ClassNameConfigurator", ()=>ClassNameConfigurator);
-var _react = require("react");
-var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-const defaultContextValue = {
-    disableDefaultClasses: false
-};
-const ClassNameConfiguratorContext = /*#__PURE__*/ _react.createContext(defaultContextValue);
-ClassNameConfiguratorContext.displayName = "ClassNameConfiguratorContext";
-function useClassNamesOverride(generateUtilityClass) {
-    const { disableDefaultClasses  } = _react.useContext(ClassNameConfiguratorContext);
-    return (slot)=>{
-        if (disableDefaultClasses) return "";
-        return generateUtilityClass(slot);
-    };
-}
-function ClassNameConfigurator(props) {
-    const { disableDefaultClasses , children  } = props;
-    const contextValue = _react.useMemo(()=>({
-            disableDefaultClasses: disableDefaultClasses != null ? disableDefaultClasses : false
-        }), [
-        disableDefaultClasses
-    ]);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(ClassNameConfiguratorContext.Provider, {
-        value: contextValue,
-        children: children
-    });
-}
-
-},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iYj1L":[function(require,module,exports) {
-/**
- * Extracts event handlers from a given object.
- * A prop is considered an event handler if it is a function and its name starts with `on`.
- *
- * @param object An object to extract event handlers from.
- * @param excludeKeys An array of keys to exclude from the returned object.
- */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "extractEventHandlers", ()=>extractEventHandlers);
-function extractEventHandlers(object, excludeKeys = []) {
-    if (object === undefined) return {};
-    const result = {};
-    Object.keys(object).filter((prop)=>prop.match(/^on[A-Z]/) && typeof object[prop] === "function" && !excludeKeys.includes(prop)).forEach((prop)=>{
-        result[prop] = object[prop];
-    });
-    return result;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bdeRV":[function(require,module,exports) {
-/**
- * If `componentProps` is a function, calls it with the provided `ownerState`.
- * Otherwise, just returns `componentProps`.
- */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "resolveComponentProps", ()=>resolveComponentProps);
-function resolveComponentProps(componentProps, ownerState, slotState) {
-    if (typeof componentProps === "function") return componentProps(ownerState, slotState);
-    return componentProps;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8kBIF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * @ignore - do not document.
- *
- * Use this function determine the host element correctly on the server (in a SSR context, for example Next.js)
- */ parcelHelpers.export(exports, "useRootElementName", ()=>useRootElementName);
-var _react = require("react");
-"use client";
-function useRootElementName(parameters) {
-    const { rootElementName: rootElementNameProp = "" , componentName  } = parameters;
-    const [rootElementName, setRootElementName] = _react.useState(rootElementNameProp.toUpperCase());
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    _react.useEffect(()=>{
-        if (rootElementNameProp && rootElementName !== rootElementNameProp.toUpperCase()) console.error(`useRootElementName: the \`rootElementName\` prop of ${componentName ? `the ${componentName} component` : "a component"} expected the '${rootElementNameProp}' element, but a '${rootElementName.toLowerCase()}' was rendered instead`, "This may cause hydration issues in an SSR context, for example in a Next.js app");
-    }, [
-        rootElementNameProp,
-        rootElementName,
-        componentName
-    ]);
-    const updateRootElementName = _react.useCallback((instance)=>{
-        var _instance$tagName;
-        setRootElementName((_instance$tagName = instance == null ? void 0 : instance.tagName) != null ? _instance$tagName : "");
-    }, []);
-    return [
-        rootElementName,
-        updateRootElementName
-    ];
-}
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5X0R6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * @ignore - do not document.
- * Builds the props to be passed into the slot of an unstyled component.
- * It merges the internal props of the component with the ones supplied by the user, allowing to customize the behavior.
- * If the slot component is not a host component, it also merges in the `ownerState`.
- *
- * @param parameters.getSlotProps - A function that returns the props to be passed to the slot component.
- */ parcelHelpers.export(exports, "useSlotProps", ()=>useSlotProps);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _utils = require("@mui/utils");
-var _appendOwnerState = require("./appendOwnerState");
-var _mergeSlotProps = require("./mergeSlotProps");
-var _resolveComponentProps = require("./resolveComponentProps");
-"use client";
-const _excluded = [
-    "elementType",
-    "externalSlotProps",
-    "ownerState",
-    "skipResolvingSlotProps"
-];
-function useSlotProps(parameters) {
-    var _parameters$additiona;
-    const { elementType , externalSlotProps , ownerState , skipResolvingSlotProps =false  } = parameters, rest = (0, _objectWithoutPropertiesLooseDefault.default)(parameters, _excluded);
-    const resolvedComponentsProps = skipResolvingSlotProps ? {} : (0, _resolveComponentProps.resolveComponentProps)(externalSlotProps, ownerState);
-    const { props: mergedProps , internalRef  } = (0, _mergeSlotProps.mergeSlotProps)((0, _extendsDefault.default)({}, rest, {
-        externalSlotProps: resolvedComponentsProps
-    }));
-    const ref = (0, _utils.unstable_useForkRef)(internalRef, resolvedComponentsProps == null ? void 0 : resolvedComponentsProps.ref, (_parameters$additiona = parameters.additionalProps) == null ? void 0 : _parameters$additiona.ref);
-    const props = (0, _appendOwnerState.appendOwnerState)(elementType, (0, _extendsDefault.default)({}, mergedProps, {
-        ref
-    }), ownerState);
-    return props;
-}
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@mui/utils":"iivny","./appendOwnerState":"hedlX","./mergeSlotProps":"4QtyH","./resolveComponentProps":"bdeRV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4QtyH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Merges the slot component internal props (usually coming from a hook)
- * with the externally provided ones.
- *
- * The merge order is (the latter overrides the former):
- * 1. The internal props (specified as a getter function to work with get*Props hook result)
- * 2. Additional props (specified internally on a Base UI component)
- * 3. External props specified on the owner component. These should only be used on a root slot.
- * 4. External props specified in the `slotProps.*` prop.
- * 5. The `className` prop - combined from all the above.
- * @param parameters
- * @returns
- */ parcelHelpers.export(exports, "mergeSlotProps", ()=>mergeSlotProps);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _clsx = require("clsx");
-var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _extractEventHandlers = require("./extractEventHandlers");
-var _omitEventHandlers = require("./omitEventHandlers");
-function mergeSlotProps(parameters) {
-    const { getSlotProps , additionalProps , externalSlotProps , externalForwardedProps , className  } = parameters;
-    if (!getSlotProps) {
-        // The simpler case - getSlotProps is not defined, so no internal event handlers are defined,
-        // so we can simply merge all the props without having to worry about extracting event handlers.
-        const joinedClasses = (0, _clsxDefault.default)(additionalProps == null ? void 0 : additionalProps.className, className, externalForwardedProps == null ? void 0 : externalForwardedProps.className, externalSlotProps == null ? void 0 : externalSlotProps.className);
-        const mergedStyle = (0, _extendsDefault.default)({}, additionalProps == null ? void 0 : additionalProps.style, externalForwardedProps == null ? void 0 : externalForwardedProps.style, externalSlotProps == null ? void 0 : externalSlotProps.style);
-        const props = (0, _extendsDefault.default)({}, additionalProps, externalForwardedProps, externalSlotProps);
-        if (joinedClasses.length > 0) props.className = joinedClasses;
-        if (Object.keys(mergedStyle).length > 0) props.style = mergedStyle;
-        return {
-            props,
-            internalRef: undefined
-        };
-    }
-    // In this case, getSlotProps is responsible for calling the external event handlers.
-    // We don't need to include them in the merged props because of this.
-    const eventHandlers = (0, _extractEventHandlers.extractEventHandlers)((0, _extendsDefault.default)({}, externalForwardedProps, externalSlotProps));
-    const componentsPropsWithoutEventHandlers = (0, _omitEventHandlers.omitEventHandlers)(externalSlotProps);
-    const otherPropsWithoutEventHandlers = (0, _omitEventHandlers.omitEventHandlers)(externalForwardedProps);
-    const internalSlotProps = getSlotProps(eventHandlers);
-    // The order of classes is important here.
-    // Emotion (that we use in libraries consuming Base UI) depends on this order
-    // to properly override style. It requires the most important classes to be last
-    // (see https://github.com/mui/material-ui/pull/33205) for the related discussion.
-    const joinedClasses = (0, _clsxDefault.default)(internalSlotProps == null ? void 0 : internalSlotProps.className, additionalProps == null ? void 0 : additionalProps.className, className, externalForwardedProps == null ? void 0 : externalForwardedProps.className, externalSlotProps == null ? void 0 : externalSlotProps.className);
-    const mergedStyle = (0, _extendsDefault.default)({}, internalSlotProps == null ? void 0 : internalSlotProps.style, additionalProps == null ? void 0 : additionalProps.style, externalForwardedProps == null ? void 0 : externalForwardedProps.style, externalSlotProps == null ? void 0 : externalSlotProps.style);
-    const props = (0, _extendsDefault.default)({}, internalSlotProps, additionalProps, otherPropsWithoutEventHandlers, componentsPropsWithoutEventHandlers);
-    if (joinedClasses.length > 0) props.className = joinedClasses;
-    if (Object.keys(mergedStyle).length > 0) props.style = mergedStyle;
-    return {
-        props,
-        internalRef: internalSlotProps.ref
-    };
-}
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","clsx":"gocd3","./extractEventHandlers":"iYj1L","./omitEventHandlers":"h0aD1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h0aD1":[function(require,module,exports) {
-/**
- * Removes event handlers from the given object.
- * A field is considered an event handler if it is a function with a name beginning with `on`.
- *
- * @param object Object to remove event handlers from.
- * @returns Object with event handlers removed.
- */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "omitEventHandlers", ()=>omitEventHandlers);
-function omitEventHandlers(object) {
-    if (object === undefined) return {};
-    const result = {};
-    Object.keys(object).filter((prop)=>!(prop.match(/^on[A-Z]/) && typeof object[prop] === "function")).forEach((prop)=>{
-        result[prop] = object[prop];
-    });
-    return result;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4jBQ4":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "prepareForSlot", ()=>prepareForSlot);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _react = require("react");
-const _excluded = [
-    "ownerState"
-];
-function prepareForSlot(Component) {
-    return /*#__PURE__*/ _react.forwardRef(function Slot(props, ref) {
-        const other = (0, _objectWithoutPropertiesLooseDefault.default)(props, _excluded);
-        return /*#__PURE__*/ _react.createElement(Component, (0, _extendsDefault.default)({}, other, {
-            ref
-        }));
-    });
-}
-
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7meW2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ez7qI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3huJa":[function(require,module,exports) {
+},{"@mui/utils/generateUtilityClasses":"7eO93","@mui/utils/generateUtilityClass":"d6tPU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3huJa":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FETCH_RESTUARANTS_DATA", ()=>FETCH_RESTUARANTS_DATA);
@@ -52987,6 +52987,8 @@ var _useOnline = require("../utils/useOnline");
 var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
 var _userContext = require("../utils/UserContext");
 var _userContextDefault = parcelHelpers.interopDefault(_userContext);
+var _offline = require("./offline");
+var _offlineDefault = parcelHelpers.interopDefault(_offline);
 var _modal = require("./modal");
 var _modalDefault = parcelHelpers.interopDefault(_modal);
 var _s = $RefreshSig$();
@@ -53014,18 +53016,16 @@ const Body = ()=>{
         }
     }
     const offline = (0, _useOnlineDefault.default)();
-    if (!offline) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Offline, Please check your internet connection"
-    }, void 0, false, {
+    if (!offline) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineDefault.default), {}, void 0, false, {
         fileName: "src/components/body.js",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 12
     }, undefined);
     if (!allResturants) return null;
     // if(filteredResturants?.length===0) return <h1>No restaurant matched your search</h1>
     return filteredResturants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/body.js",
-        lineNumber: 47,
+        lineNumber: 48,
         columnNumber: 45
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -53041,7 +53041,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 49,
+                        lineNumber: 50,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -53053,13 +53053,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 52,
+                        lineNumber: 53,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/body.js",
-                lineNumber: 48,
+                lineNumber: 49,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -53073,20 +53073,20 @@ const Body = ()=>{
                             user: user,
                             __source: {
                                 fileName: "src/components/body.js",
-                                lineNumber: 79,
+                                lineNumber: 80,
                                 columnNumber: 88
                             },
                             __self: undefined
                         })
                     }, restaurant.info.id, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 79,
+                        lineNumber: 80,
                         columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 76,
+                lineNumber: 77,
                 columnNumber: 9
             }, undefined)
         ]
@@ -53107,7 +53107,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./cards":"kZUEy","../constants.js":"3huJa","./restaurantMenu":"1ug3V","./shimmer":"fWXGy","../styles/cards.css":"iD6Em","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useOnline":"74Yls","../utils/UserContext":"c5vgB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./modal":"eFFcX"}],"kZUEy":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./cards":"kZUEy","../constants.js":"3huJa","./restaurantMenu":"1ug3V","./shimmer":"fWXGy","../styles/cards.css":"iD6Em","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useOnline":"74Yls","../utils/UserContext":"c5vgB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./modal":"eFFcX","./offline":"9lJfo"}],"kZUEy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2539 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -57462,7 +57462,52 @@ $RefreshReg$(_c, "Modal");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/modal.css":"aEm12","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aEm12":[function() {},{}],"14UOH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/modal.css":"aEm12","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aEm12":[function() {},{}],"9lJfo":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ddcd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ddcd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Offline = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        style: {
+            height: "100vh"
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            style: {
+                fontFamily: "sans-serif",
+                fontSize: "xxx-large",
+                marginTop: "59px"
+            },
+            children: "Offline, Please check your internet connection"
+        }, void 0, false, {
+            fileName: "src/components/offline.js",
+            lineNumber: 6,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/offline.js",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Offline;
+exports.default = Offline;
+var _c;
+$RefreshReg$(_c, "Offline");
+
+  $parcel$ReactRefreshHelpers$ddcd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"14UOH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$de60 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -57538,10 +57583,21 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _hi = require("react-icons/hi");
 var _bs = require("react-icons/bs");
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _offline = require("./offline");
+var _offlineDefault = parcelHelpers.interopDefault(_offline);
+var _s = $RefreshSig$();
 const Contact = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    _s();
+    const offline = (0, _useOnlineDefault.default)();
+    return !offline ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineDefault.default), {}, void 0, false, {
+        fileName: "src/components/contact.js",
+        lineNumber: 8,
+        columnNumber: 21
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         name: "contact",
-        className: "w-full h-[1238px] bg-[#0a192f] flex justify-center items-center p-4",
+        className: "w-full h-[920px] bg-[#0a192f] flex justify-center items-center p-4",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
             method: "POST",
             action: "https://getform.io/f/f3ebe8bb-a653-4e6d-a884-fbbe08bec439",
@@ -57555,7 +57611,7 @@ const Contact = ()=>{
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "src/components/contact.js",
-                            lineNumber: 8,
+                            lineNumber: 11,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -57563,7 +57619,7 @@ const Contact = ()=>{
                             children: "Submit the form or contact admin :"
                         }, void 0, false, {
                             fileName: "src/components/contact.js",
-                            lineNumber: 9,
+                            lineNumber: 12,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -57573,14 +57629,14 @@ const Contact = ()=>{
                                     size: 30
                                 }, void 0, false, {
                                     fileName: "src/components/contact.js",
-                                    lineNumber: 10,
+                                    lineNumber: 13,
                                     columnNumber: 97
                                 }, undefined),
                                 "sharmavishrut1998@gmail.com"
                             ]
                         }, void 0, true, {
                             fileName: "src/components/contact.js",
-                            lineNumber: 10,
+                            lineNumber: 13,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -57590,20 +57646,20 @@ const Contact = ()=>{
                                     size: 30
                                 }, void 0, false, {
                                     fileName: "src/components/contact.js",
-                                    lineNumber: 11,
+                                    lineNumber: 14,
                                     columnNumber: 97
                                 }, undefined),
                                 "+91 9540105285"
                             ]
                         }, void 0, true, {
                             fileName: "src/components/contact.js",
-                            lineNumber: 11,
+                            lineNumber: 14,
                             columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/contact.js",
-                    lineNumber: 7,
+                    lineNumber: 10,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -57613,7 +57669,7 @@ const Contact = ()=>{
                     name: "Name"
                 }, void 0, false, {
                     fileName: "src/components/contact.js",
-                    lineNumber: 13,
+                    lineNumber: 16,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -57623,7 +57679,7 @@ const Contact = ()=>{
                     name: "Email"
                 }, void 0, false, {
                     fileName: "src/components/contact.js",
-                    lineNumber: 14,
+                    lineNumber: 17,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
@@ -57633,7 +57689,7 @@ const Contact = ()=>{
                     placeholder: "Message"
                 }, void 0, false, {
                     fileName: "src/components/contact.js",
-                    lineNumber: 15,
+                    lineNumber: 18,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -57641,21 +57697,26 @@ const Contact = ()=>{
                     children: "Let's Collaborate"
                 }, void 0, false, {
                     fileName: "src/components/contact.js",
-                    lineNumber: 16,
+                    lineNumber: 19,
                     columnNumber: 13
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/contact.js",
-            lineNumber: 6,
+            lineNumber: 9,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/contact.js",
-        lineNumber: 5,
-        columnNumber: 10
+        lineNumber: 8,
+        columnNumber: 35
     }, undefined);
 };
+_s(Contact, "fHpS6FYXQQQmre7Fi8Ya70xnThg=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
 _c = Contact;
 exports.default = Contact;
 var _c;
@@ -57666,7 +57727,7 @@ $RefreshReg$(_c, "Contact");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-icons/hi":"lBxqJ","react-icons/bs":"JJZe4"}],"lBxqJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-icons/hi":"lBxqJ","react-icons/bs":"JJZe4","../utils/useOnline":"74Yls","./offline":"9lJfo"}],"lBxqJ":[function(require,module,exports) {
 // THIS FILE IS AUTO GENERATED
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -122136,7 +122197,7 @@ class Profile extends (0, _reactDefault.default).Component {
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "absolute inset-y-50 right-0 h-[400px] w-[400px] mt-[-80px] mr-[250px] rounded-lg",
+                    className: "absolute inset-y-50 right-0 h-[400px] w-[400px] mt-[37px] mr-[250px] rounded-lg",
                     src: this.state.userInfo.avatar_url
                 }, void 0, false, {
                     fileName: "src/components/profileClass.js",
@@ -122360,7 +122421,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/UserContext":"c5vgB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/icons-material/LocationOn":"9U2Zf","@mui/material/Box":"eQD0H","@mui/icons-material/Mail":"cRtL5","@mui/icons-material/LocalPhone":"bHSde"}],"9U2Zf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/UserContext":"c5vgB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/icons-material/LocationOn":"9U2Zf","@mui/icons-material/Mail":"cRtL5","@mui/icons-material/LocalPhone":"bHSde","@mui/material/Box":"eQD0H"}],"9U2Zf":[function(require,module,exports) {
 "use strict";
 "use client";
 var _interopRequireDefault = require("3b5d7bbfe1844624");
@@ -122621,6 +122682,9 @@ const Cart = ()=>{
     const totalPrice = cartItems.reduce((totalPrice, item)=>totalPrice += item.card.info.price, 0);
     //let total = 0;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        style: {
+            height: "70vh"
+        },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex",
@@ -122634,7 +122698,7 @@ const Cart = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 18,
+                        lineNumber: 20,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -122645,7 +122709,7 @@ const Cart = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 22,
+                        lineNumber: 24,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -122654,13 +122718,13 @@ const Cart = ()=>{
                         children: "Clear Cart"
                     }, void 0, false, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 23,
+                        lineNumber: 25,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 17,
+                lineNumber: 19,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122669,12 +122733,12 @@ const Cart = ()=>{
                         ...item.card.info
                     }, item.card.info.id, false, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 25,
+                        lineNumber: 27,
                         columnNumber: 58
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 25,
+                lineNumber: 27,
                 columnNumber: 13
             }, undefined)
         ]

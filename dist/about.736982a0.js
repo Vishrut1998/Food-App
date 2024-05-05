@@ -597,6 +597,11 @@ var _profileClassDefault = parcelHelpers.interopDefault(_profileClass);
 var _box = require("@mui/material/Box");
 var _boxDefault = parcelHelpers.interopDefault(_box);
 var _material = require("@mui/material");
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _offlineJs = require("./offline.js");
+var _offlineJsDefault = parcelHelpers.interopDefault(_offlineJs);
+var _s = $RefreshSig$();
 const aboutHeading = {
     fontFamily: "sans-serif",
     fontSize: "xxx-large",
@@ -605,102 +610,154 @@ const aboutHeading = {
     marginTop: "10px",
     width: "336px"
 };
-class About extends (0, _reactDefault.default).Component {
-    constructor(props){
-        super(props);
-        console.log("Parent constructor");
-    }
-    componentDidMount() {
-        //Best Place to make an API call as it is after render
-        console.log("Parent compoenentDidMount");
-    }
-    render() {
-        console.log("Parent render");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+// if (!offline) {
+//   return <h1>Offline, Please check your internet connection</h1>;
+// }
+const About = ()=>{
+    _s();
+    const offline = (0, _useOnlineDefault.default)();
+    return !offline ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineJsDefault.default), {}, void 0, false, {
+        fileName: "src/components/about.js",
+        lineNumber: 24,
+        columnNumber: 21
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        style: {
+            height: "60vh"
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxDefault.default), {
+            height: 400,
+            width: 600,
+            my: 4,
+            marginLeft: 6,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 4,
+            p: 2,
+            ml: 40,
+            sx: {
+                border: "none"
+            },
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    style: aboutHeading,
-                    children: "About Page"
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileClassDefault.default), {
+                    name: "Vishrut Class"
                 }, void 0, false, {
                     fileName: "src/components/about.js",
-                    lineNumber: 28,
+                    lineNumber: 31,
                     columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _boxDefault.default), {
-                    height: 200,
-                    width: 300,
-                    my: 4,
-                    marginLeft: 6,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: 4,
-                    p: 2,
-                    sx: {
-                        border: "2px solid grey"
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    style: {
+                        fontFamily: "sans-serif",
+                        fontSize: "xxx-large"
+                    },
+                    children: "This is Vishrut Sharma's Food Villa"
+                }, void 0, false, {
+                    fileName: "src/components/about.js",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    style: {
+                        fontFamily: "sans-serif",
+                        fontSize: "xxx-large"
                     },
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileClassDefault.default), {
-                            name: "Vishrut Class"
+                        "Click",
+                        " ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: "https://portfoliovishrut.netlify.app/",
+                            target: "_blank",
+                            style: {
+                                border: "2px solid black",
+                                padding: "2px"
+                            },
+                            children: "here"
                         }, void 0, false, {
                             fileName: "src/components/about.js",
-                            lineNumber: 33,
+                            lineNumber: 43,
                             columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            children: "This is Vishrut Sharma's Food Villa"
-                        }, void 0, false, {
-                            fileName: "src/components/about.js",
-                            lineNumber: 34,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            children: [
-                                "Click",
-                                " ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                    href: "https://portfoliovishrut.netlify.app/",
-                                    target: "_blank",
-                                    style: {
-                                        border: "2px solid black",
-                                        padding: "2px"
-                                    },
-                                    children: "here"
-                                }, void 0, false, {
-                                    fileName: "src/components/about.js",
-                                    lineNumber: 37,
-                                    columnNumber: 13
-                                }, this),
-                                " ",
-                                "to checkout my personal portfolio."
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/about.js",
-                            lineNumber: 35,
-                            columnNumber: 11
-                        }, this)
+                        }, undefined),
+                        " ",
+                        "to checkout my personal portfolio."
                     ]
                 }, void 0, true, {
                     fileName: "src/components/about.js",
-                    lineNumber: 29,
+                    lineNumber: 38,
                     columnNumber: 9
-                }, this)
+                }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/about.js",
-            lineNumber: 27,
-            columnNumber: 12
-        }, this);
-    }
-}
+            lineNumber: 28,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/about.js",
+        lineNumber: 24,
+        columnNumber: 35
+    }, undefined);
+};
+_s(About, "fHpS6FYXQQQmre7Fi8Ya70xnThg=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
+_c = About;
+// class About extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     console.log("Parent constructor");
+//   }
+//   componentDidMount() {
+//     //Best Place to make an API call as it is after render
+//     console.log("Parent compoenentDidMount");
+//   }
+//   render() {
+//     if(!offline){
+//         return(<h1>Offline, Please check your internet connection</h1>)
+//     }
+//     console.log("Parent render");
+//     return (
+//       <div style={{height: '60vh'}}>
+//         {/* <h1 style={aboutHeading}>About Page</h1> */}
+//         <Box
+//           height={400}
+//           width={600}
+//           my={4}
+//           marginLeft={6}
+//           display="flex"
+//           flexDirection="column"
+//           alignItems="center"
+//           gap={4}
+//           p={2}
+//           ml={40}
+//           sx={{ border: "none" }}
+//         >
+//           <Profile name={"Vishrut Class"} />
+//           <p style={{fontFamily: 'sans-serif', fontSize:'xxx-large'}}>This is Vishrut Sharma's Food Villa</p>
+//           <p style={{fontFamily: 'sans-serif', fontSize:'xxx-large'}}>
+//             Click{" "}
+//             <a href="https://portfoliovishrut.netlify.app/" target="_blank" style={{border: '2px solid black', padding: '2px'}}>
+//               here
+//             </a>{" "}
+//             to checkout my personal portfolio.
+//           </p>
+//         </Box>
+//       </div>
+//     );
+//   }
+// }
 exports.default = About;
+var _c;
+$RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$6418.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./profile.js":"5ILuw","./profileClass":"e8etO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/material/Box":"eQD0H","@mui/material":"40376"}],"40376":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./profile.js":"5ILuw","./profileClass":"e8etO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@mui/material/Box":"eQD0H","@mui/material":"40376","../utils/useOnline":"74Yls","./offline.js":"9lJfo"}],"40376":[function(require,module,exports) {
 /**
  * @mui/material v5.15.16
  *
@@ -1265,7 +1322,7 @@ var _generateUtilityClassesDefault = parcelHelpers.interopDefault(_generateUtili
 var _unstableTrapFocus = require("./Unstable_TrapFocus");
 var _unstableTrapFocusDefault = parcelHelpers.interopDefault(_unstableTrapFocus);
 
-},{"./colors":"jNAPI","./styles":"1lzai","./utils":"9bp9M","./Accordion":"fQZka","./AccordionActions":"94zNI","./AccordionDetails":"8mhf8","./AccordionSummary":"0u6LC","./Alert":"bJH0A","./AlertTitle":"jJpCo","./AppBar":"c3vaq","./Autocomplete":"dge5E","./Avatar":"hJMuL","./AvatarGroup":"1ocWL","./Backdrop":"23PLD","./Badge":"fdxar","./BottomNavigation":"gLTWp","./BottomNavigationAction":"iCFY8","./Box":"eQD0H","./Breadcrumbs":"dleWr","./Button":"73csw","./ButtonBase":"aeHoF","./ButtonGroup":"bAjAE","./Card":"hWYZ3","./CardActionArea":"gnJSc","./CardActions":"beID0","./CardContent":"lVecn","./CardHeader":"hRKul","./CardMedia":"kaOTJ","./Checkbox":"duHVh","./Chip":"6k8Vq","./CircularProgress":"gnTt5","./ClickAwayListener":"wfakt","./Collapse":"lGzFX","./Container":"75pQf","./CssBaseline":"eRYsJ","./darkScrollbar":"jkiv3","./Dialog":"ftK48","./DialogActions":"25Z2G","./DialogContent":"gZO7I","./DialogContentText":"iLsKC","./DialogTitle":"642rE","./Divider":"lHE5Y","./Drawer":"hMEec","./Fab":"bL0iw","./Fade":"eB1a4","./FilledInput":"fn85o","./FormControl":"2FZGq","./FormControlLabel":"gbxlC","./FormGroup":"f1wae","./FormHelperText":"hp8IL","./FormLabel":"d9Vfs","./Grid":"c17UE","./Unstable_Grid2":"2ssQQ","./Grow":"9py3h","./Hidden":"7mZ3H","./Icon":"kWTOK","./IconButton":"38BrD","./ImageList":"4Vnah","./ImageListItem":"c8p8h","./ImageListItemBar":"e77Yb","./Input":"4JIyx","./InputAdornment":"dKZP6","./InputBase":"1ezJA","./InputLabel":"3Ew25","./LinearProgress":"jIhmt","./Link":"f1yGe","./List":"PwNf5","./ListItem":"kkzrF","./ListItemAvatar":"4u1H8","./ListItemButton":"gdWZi","./ListItemIcon":"2P7xS","./ListItemSecondaryAction":"iwQQM","./ListItemText":"g3ISx","./ListSubheader":"kEPDP","./Menu":"dOURT","./MenuItem":"6tZ4p","./MenuList":"8m6xB","./MobileStepper":"igLe4","./Modal":"lSUh1","./NativeSelect":"jmxiA","./NoSsr":"jWaXr","./OutlinedInput":"jaFpb","./Pagination":"h0Z1H","./PaginationItem":"1YDXt","./Paper":"6IiTP","./Popover":"cVP3a","./Popper":"fRdIk","./Portal":"4kMNx","./Radio":"9UG0h","./RadioGroup":"cYsIV","./Rating":"dl9C8","./ScopedCssBaseline":"gBn06","./Select":"lFmVj","./Skeleton":"4F50o","./Slide":"fZVcF","./Slider":"lasgU","./Snackbar":"25Fj7","./SnackbarContent":"5HymQ","./SpeedDial":"5kcc8","./SpeedDialAction":"a5UpM","./SpeedDialIcon":"4Ytbn","./Stack":"cuThX","./Step":"iyGi3","./StepButton":"fUSX3","./StepConnector":"9Iq35","./StepContent":"2MleN","./StepIcon":"4Q0Rf","./StepLabel":"fGsDe","./Stepper":"auyZd","./SvgIcon":"egDpG","./SwipeableDrawer":"9Uxdp","./Switch":"4koV5","./Tab":"qUQlS","./Table":"kMsTr","./TableBody":"5g3NK","./TableCell":"51cO7","./TableContainer":"2iWwJ","./TableFooter":"lrnnS","./TableHead":"jeSyl","./TablePagination":"hxqHq","./TableRow":"ipJdN","./TableSortLabel":"68UO8","./Tabs":"33M2p","./TabScrollButton":"5Lkc2","./TextField":"hlqrK","./TextareaAutosize":"cJF6X","./ToggleButton":"1n5QG","./ToggleButtonGroup":"fDi9n","./Toolbar":"h8rSE","./Tooltip":"5uL59","./Typography":"faxSz","./useMediaQuery":"eeOzk","./usePagination":"9NrZE","./useScrollTrigger":"f4DPh","./Zoom":"4cIKp","./useAutocomplete":false,"./GlobalStyles":"iDS8U","@mui/base/composeClasses":"2T3xi","./generateUtilityClass":"gzKc1","./generateUtilityClasses":false,"./Unstable_TrapFocus":"bRCDp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jNAPI":[function(require,module,exports) {
+},{"./colors":"jNAPI","./styles":"1lzai","./utils":"9bp9M","./Accordion":"fQZka","./AccordionActions":"94zNI","./AccordionDetails":"8mhf8","./AccordionSummary":"0u6LC","./Alert":"bJH0A","./AlertTitle":"jJpCo","./AppBar":"c3vaq","./Autocomplete":"dge5E","./Avatar":"hJMuL","./AvatarGroup":"1ocWL","./Backdrop":"23PLD","./Badge":"fdxar","./BottomNavigation":"gLTWp","./BottomNavigationAction":"iCFY8","./Box":"eQD0H","./Breadcrumbs":"dleWr","./Button":"73csw","./ButtonBase":"aeHoF","./ButtonGroup":"bAjAE","./Card":"hWYZ3","./CardActionArea":"gnJSc","./CardActions":"beID0","./CardContent":"lVecn","./CardHeader":"hRKul","./CardMedia":"kaOTJ","./Checkbox":"duHVh","./Chip":"6k8Vq","./CircularProgress":"gnTt5","./ClickAwayListener":"wfakt","./Collapse":"lGzFX","./Container":"75pQf","./CssBaseline":"eRYsJ","./darkScrollbar":"jkiv3","./Dialog":"ftK48","./DialogActions":"25Z2G","./DialogContent":"gZO7I","./DialogContentText":"iLsKC","./DialogTitle":"642rE","./Divider":"lHE5Y","./Drawer":"hMEec","./Fab":"bL0iw","./Fade":"eB1a4","./FilledInput":"fn85o","./FormControl":"2FZGq","./FormControlLabel":"gbxlC","./FormGroup":"f1wae","./FormHelperText":"hp8IL","./FormLabel":"d9Vfs","./Grid":"c17UE","./Unstable_Grid2":"2ssQQ","./Grow":"9py3h","./Hidden":"7mZ3H","./Icon":"kWTOK","./IconButton":"38BrD","./ImageList":"4Vnah","./ImageListItem":"c8p8h","./ImageListItemBar":"e77Yb","./Input":"4JIyx","./InputAdornment":"dKZP6","./InputBase":"1ezJA","./InputLabel":"3Ew25","./LinearProgress":"jIhmt","./Link":"f1yGe","./List":"PwNf5","./ListItem":"kkzrF","./ListItemAvatar":"4u1H8","./ListItemButton":"gdWZi","./ListItemIcon":"2P7xS","./ListItemSecondaryAction":"iwQQM","./ListItemText":"g3ISx","./ListSubheader":"kEPDP","./Menu":"dOURT","./MenuItem":"6tZ4p","./MenuList":"8m6xB","./MobileStepper":"igLe4","./Modal":"lSUh1","./NativeSelect":"jmxiA","./NoSsr":"jWaXr","./OutlinedInput":"jaFpb","./Pagination":"h0Z1H","./PaginationItem":"1YDXt","./Paper":"6IiTP","./Popover":"cVP3a","./Popper":"fRdIk","./Portal":"4kMNx","./Radio":"9UG0h","./RadioGroup":"cYsIV","./Rating":"dl9C8","./ScopedCssBaseline":"gBn06","./Select":"lFmVj","./Skeleton":"4F50o","./Slide":"fZVcF","./Slider":"lasgU","./Snackbar":"25Fj7","./SnackbarContent":"5HymQ","./SpeedDial":"5kcc8","./SpeedDialAction":"a5UpM","./SpeedDialIcon":"4Ytbn","./Stack":"cuThX","./Step":"iyGi3","./StepButton":"fUSX3","./StepConnector":"9Iq35","./StepContent":"2MleN","./StepIcon":"4Q0Rf","./StepLabel":"fGsDe","./Stepper":"auyZd","./SvgIcon":"egDpG","./SwipeableDrawer":"9Uxdp","./Switch":"4koV5","./Tab":"qUQlS","./Table":"kMsTr","./TableBody":"5g3NK","./TableCell":"51cO7","./TableContainer":"2iWwJ","./TableFooter":"lrnnS","./TableHead":"jeSyl","./TablePagination":"hxqHq","./TableRow":"ipJdN","./TableSortLabel":"68UO8","./Tabs":"33M2p","./TabScrollButton":"5Lkc2","./TextField":"hlqrK","./TextareaAutosize":"cJF6X","./ToggleButton":"1n5QG","./ToggleButtonGroup":"fDi9n","./Toolbar":"h8rSE","./Tooltip":"5uL59","./Typography":"faxSz","./useMediaQuery":"eeOzk","./usePagination":"9NrZE","./useScrollTrigger":"f4DPh","./Zoom":"4cIKp","./useAutocomplete":"d75kd","./GlobalStyles":"iDS8U","@mui/base/composeClasses":"2T3xi","./generateUtilityClass":"gzKc1","./generateUtilityClasses":"DfHkn","./Unstable_TrapFocus":"bRCDp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jNAPI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "common", ()=>(0, _commonDefault.default));
@@ -56366,10 +56423,33 @@ function useScrollTrigger(options = {}) {
 }
 exports.default = useScrollTrigger;
 
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gzKc1":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d75kd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _useAutocompleteDefault.default));
+parcelHelpers.export(exports, "createFilterOptions", ()=>(0, _useAutocomplete.createFilterOptions));
+var _useAutocomplete = require("./useAutocomplete");
+var _useAutocompleteDefault = parcelHelpers.interopDefault(_useAutocomplete);
+"use client";
+
+},{"./useAutocomplete":"jLmkp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jLmkp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _useAutocomplete.useAutocomplete));
+var _useAutocomplete = require("@mui/base/useAutocomplete");
+parcelHelpers.exportAll(_useAutocomplete, exports);
+"use client";
+
+},{"@mui/base/useAutocomplete":"hmB1j","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gzKc1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>(0, _utils.unstable_generateUtilityClass));
+var _utils = require("@mui/utils");
+
+},{"@mui/utils":"iivny","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"DfHkn":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _utils.unstable_generateUtilityClasses));
 var _utils = require("@mui/utils");
 
 },{"@mui/utils":"iivny","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","gTAVR"], null, "parcelRequirea9e5")

@@ -20,7 +20,7 @@ const Cart = () => {
 
     //let total = 0;
     return (
-        <div>
+        <div style={{height: '70vh'}}>
             <div className="flex">
             <h1 className="p-2 m-2 font-bold text-3xl">Cart - {cartItems.length} items</h1>
             {/* <h1 className="font-bold text-3xl">Total Amount : {cartItems.map(item => item.card.info.price.array.forEach(element => {

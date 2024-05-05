@@ -1,4 +1,6 @@
 import { useState } from "react"
+import useOnline from "../utils/useOnline"
+import Offline from "./offline"
 
 const Section = ({title, description, isVisible, setIsVisible}) => {
     return (
@@ -12,8 +14,9 @@ const Section = ({title, description, isVisible, setIsVisible}) => {
 
 const Instamart = () => {
     const [visibleSection, setVisibileSection] = useState("about")
-    return (
-      <div>
+    const offline = useOnline()
+    return ( !offline ? <Offline /> : 
+      <div style={{height: '60vh'}}>
         <h1 className="text-3xl p-2 m-2 font-bold">Instamart</h1>
         <Section
           title={"About Instamart"}

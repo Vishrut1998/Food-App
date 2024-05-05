@@ -10,6 +10,7 @@ import { filterData } from '../utils/helper';
 import useOnline from '../utils/useOnline';
 import UserContext from '../utils/UserContext';
 import {FETCH_RESTUARANTS_DATA} from  "../constants.js";
+import Offline from './offline';
 import Modal from './modal';
 
 
@@ -50,7 +51,7 @@ const Body = () => {
     const offline = useOnline();
 
     if(!offline){
-        return(<h1>Offline, Please check your internet connection</h1>)
+        return(<Offline/>)
     }
 
     if(!allResturants) return null;

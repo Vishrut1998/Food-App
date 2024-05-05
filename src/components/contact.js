@@ -1,11 +1,14 @@
 import React from 'react'
 import {HiOutlineMail} from 'react-icons/hi';
 import {BsPhone} from 'react-icons/bs';
+import useOnline from '../utils/useOnline';
+import Offline from './offline';
 
 
 const Contact = () => {
+    const offline = useOnline();
     return (
-        <div name='contact' className='w-full h-[1238px] bg-[#0a192f] flex justify-center items-center p-4'>
+        !offline ? <Offline/> : <div name='contact' className='w-full h-[920px] bg-[#0a192f] flex justify-center items-center p-4'>
         <form method='POST' action="https://getform.io/f/f3ebe8bb-a653-4e6d-a884-fbbe08bec439" className='mb-20 flex flex-col max-w-[600px] w-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>Contact</p>
