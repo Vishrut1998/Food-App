@@ -1,5 +1,5 @@
     import { useState, useEffect } from "react";
-    import { SWIGGY_PROXY, FETCH_MENU_URL } from "../constants";
+    import { FETCH_MENU_URL } from "../constants";
 
     const useRestaurant = (resId, lat, lng) => {
     const [restaurant, setRestaurant] = useState(null);
