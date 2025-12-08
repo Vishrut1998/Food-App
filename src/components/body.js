@@ -12,6 +12,7 @@ import UserContext from '../utils/UserContext';
 import {FETCH_RESTUARANTS_DATA} from  "../constants.js";
 import Offline from './offline';
 import Modal from './modal';
+import { getLocation } from '../utils/getLocation';
 
 
 
@@ -24,6 +25,7 @@ const Body = () => {
     const [searchTxt, setSearchTxt] = useState();
     const {user, setUser} = useContext(UserContext)
     
+    
 
     useEffect(() => {
         
@@ -32,13 +34,18 @@ const Body = () => {
     }, []);
 
     async function getRestuarants(){
-        
+        const { lat, lng } = await getLocation();
+        console.log("Here =>>>>>>", {Latitude: lat, Longitude: lng})
         try{
-        const data = await fetch(FETCH_RESTUARANTS_DATA);
+        const qs = `?type=restaurants&lat=${encodeURIComponent(lat)}&lng=${encodeURIComponent(lng)}`;
+        console.log("Here after =>>>>", `${SWIGGY_PROXY}/${qs}`)
+        // const data = await fetch(`${SWIGGY_PROXY}/${qs}`);
+        const data = await fetch(`https://foodfire.onrender.com/api/restaurants?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`)
         const json = await data.json()
+        console.log("JSON in main =>>", json)    
         const restaurantList = json?.data?.cards[4].card.card.gridElements?.infoWithStyle?.restaurants;
         
-        console.log(restaurantList);
+        console.log("Resturant List =>>>",restaurantList);
         setFilteredResturants(restaurantList);
         setAllResturants(restaurantList);   
         //console.log(restaurantList,"vishrut")
@@ -66,7 +73,7 @@ const Body = () => {
                 setSearchTxt(e.target.value)
             }}/>
             <button className='px-5 py-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-lg' onClick={() => {
-                const data = filterData(searchTxt,allResturants)
+                const data = filterData(searchTxt,allResturants)    
                 setFilteredResturants(data)  
             }}>Search</button>
             {/* <input className='focus:bg-teal-100 p-2 m-2' value={user.name} onChange={

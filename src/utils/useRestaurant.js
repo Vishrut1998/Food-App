@@ -1,31 +1,37 @@
-import { useState, useEffect } from "react";
-import { FETCH_MENU_URL } from "../constants";
+    import { useState, useEffect } from "react";
+    import { SWIGGY_PROXY, FETCH_MENU_URL } from "../constants";
 
-const useRestaurant =(resId) => {
-    const[restaurant, setRestaurant] = useState()
-    //const [menuRestaurant, setMenuRestaurant] = useState();
-
-    //get data from API
+    const useRestaurant = (resId, lat, lng) => {
+    const [restaurant, setRestaurant] = useState(null);
 
     useEffect(() => {
+        if (!lat || !lng || !resId) return;
         getRestaurantMenu();
-    },[]);
+    }, [lat, lng, resId]);
 
-    async function getRestaurantMenu(){
-        const data  = await fetch(FETCH_MENU_URL+resId);
-        const json = await data.json();
-        //console.log(json)
-        //console.log(json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.categories[0].itemCards[0].card.info);
-        //console.log(json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards)
-        //console.log(json?.data?.cards[0]?.card?.card?.info)
-        // setRestaurant(json?.data?.cards[0]?.card?.card?.info)
-        // setMenuRestaurant(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards)
-        setRestaurant(json?.data)
+    async function getRestaurantMenu() {
+        try {
+        const qs = `?type=menu&lat=${encodeURIComponent(lat)}&lng=${encodeURIComponent(lng)}&restaurantId=${resId}`;
+        const url = `${SWIGGY_PROXY}/${qs}`;
+
+        console.log("Calling Proxy URL:", url);
+
+        const res = await fetch(`https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&submitAction=ENTER&restaurantId=${resId}`);
+        // console.log("Hello=>>>>",res.json())
+        if (!res.ok) {
+            console.error("Proxy fetch failed:", res.status);
+            return;
+        }
+        const jsonData = await res.json();
+        console.log("Proxy response JSON:", jsonData);
+
+        setRestaurant(jsonData?.data);
+        } catch (err) {
+        console.error("Proxy error:", err);
+        }
     }
-   
+
     return restaurant;
-    
+    };
 
-}
-
-export default useRestaurant;
+    export default useRestaurant;

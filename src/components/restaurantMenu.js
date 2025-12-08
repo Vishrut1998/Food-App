@@ -1,4 +1,4 @@
-import { useEffect , useState } from "react";
+import {useState , useEffect} from 'react'
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL} from '../constants';
@@ -6,14 +6,28 @@ import { IMG_CDN_URL} from '../constants';
 import { addItem, removeItem } from "../utils/cartSlice";
 import useRestaurant from "../utils/useRestaurant";
 import Shimmer from "./shimmer";
+import { getLocation } from "../utils/getLocation";
 
 
 const RestaurantMenu = () => {
-
+    const [coords, setCoords] = useState({lat: null, lng: null});
     const {resId} = useParams();
-    const restaurant = useRestaurant(resId);
+
+    useEffect(() => {
+        (async () => {
+          const loc = await getLocation();
+          setCoords(loc);
+        })();
+      }, []);
+
+      console.log("Resutrant in menu =>>>", {
+          Latitude: coords.lat,
+          Longitude: coords.lng
+      })
+    const restaurant = useRestaurant(resId,coords.lat,coords.lng);
+    console.log("Resturant for which menu =>>>", restaurant)
     const restaurantHome = restaurant?.cards[2]?.card?.card?.info;
-    const restaurantMenu = restaurant?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
+    const restaurantMenu = restaurant?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.carousel;
     const dispatch = useDispatch();
     const addFoodItem = (item) => {
         dispatch(addItem(item))
@@ -38,7 +52,7 @@ const RestaurantMenu = () => {
                 <h1>Menu</h1>
                 <ul >
                     {
-                        Object.values(restaurantMenu)?.map((items) => <li key={items?.card?.info?.id}>{items?.card?.info?.name} - {items?.card?.info?.price/100+' ₹'} 
+                        Object.values(restaurantMenu || {})?.map((items) => <li key={items?.dish?.info?.id}>{items?.dish?.info?.name} - {items?.dish?.info?.defaultPrice/100+' ₹'} 
                         <div >
                         <button className="p-2 m-2 bg-green-100" onClick={() => {addFoodItem(items)}}>Add</button>
                         <button className="p-2 m-2 bg-red-100" onClick={() => {removeFoodItem(items)}}>Remove</button>
