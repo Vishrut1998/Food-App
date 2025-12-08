@@ -1,7 +1,5 @@
 import React from 'react';
 import Card from './cards';
-import {resutrantData} from "../constants.js";
-import RestaurantMenu from './restaurantMenu';
 import Shimmer from './shimmer';
 import "../styles/cards.css";
 import {useState, useEffect, useContext} from 'react';
@@ -9,9 +7,7 @@ import {Link} from 'react-router-dom';
 import { filterData } from '../utils/helper';
 import useOnline from '../utils/useOnline';
 import UserContext from '../utils/UserContext';
-import {FETCH_RESTUARANTS_DATA} from  "../constants.js";
 import Offline from './offline';
-import Modal from './modal';
 import { getLocation } from '../utils/getLocation';
 
 
@@ -38,7 +34,6 @@ const Body = () => {
         console.log("Here =>>>>>>", {Latitude: lat, Longitude: lng})
         try{
         const qs = `?type=restaurants&lat=${encodeURIComponent(lat)}&lng=${encodeURIComponent(lng)}`;
-        console.log("Here after =>>>>", `${SWIGGY_PROXY}/${qs}`)
         // const data = await fetch(`${SWIGGY_PROXY}/${qs}`);
         const data = await fetch(`https://foodfire.onrender.com/api/restaurants?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`)
         const json = await data.json()

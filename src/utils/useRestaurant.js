@@ -1,37 +1,43 @@
-    import { useState, useEffect } from "react";
-    import { FETCH_MENU_URL } from "../constants";
+import { useState, useEffect } from "react";
 
-    const useRestaurant = (resId, lat, lng) => {
-    const [restaurant, setRestaurant] = useState(null);
+const useRestaurant = (resId, lat, lng, setMenuFailed) => {
+  const [restaurant, setRestaurant] = useState(null);
 
-    useEffect(() => {
-        if (!lat || !lng || !resId) return;
-        getRestaurantMenu();
-    }, [lat, lng, resId]);
+  useEffect(() => {
+    if (!lat || !lng || !resId) return;
 
-    async function getRestaurantMenu() {
-        try {
-        const qs = `?type=menu&lat=${encodeURIComponent(lat)}&lng=${encodeURIComponent(lng)}&restaurantId=${resId}`;
-        const url = `${SWIGGY_PROXY}/${qs}`;
+    const getRestaurantMenu = async () => {
+      try {
+        const res = await fetch(
+          `https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&submitAction=ENTER&restaurantId=${resId}`
+        );
 
-        console.log("Calling Proxy URL:", url);
-
-        const res = await fetch(`https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&submitAction=ENTER&restaurantId=${resId}`);
-        // console.log("Hello=>>>>",res.json())
         if (!res.ok) {
-            console.error("Proxy fetch failed:", res.status);
-            return;
+          console.error("Menu fetch failed:", res.status);
+          setMenuFailed(true);
+          return;
         }
+
         const jsonData = await res.json();
-        console.log("Proxy response JSON:", jsonData);
 
-        setRestaurant(jsonData?.data);
-        } catch (err) {
-        console.error("Proxy error:", err);
+        if (!jsonData?.data) {
+          console.warn("Menu data not found for this restaurant");
+          setMenuFailed(true);
+          return;
         }
-    }
 
-    return restaurant;
+        setRestaurant(jsonData.data);
+        setMenuFailed(false);
+      } catch (err) {
+        console.error("Menu fetch error:", err);
+        setMenuFailed(true);
+      }
     };
 
-    export default useRestaurant;
+    getRestaurantMenu();
+  }, [resId, lat, lng, setMenuFailed]);
+
+  return restaurant;
+};
+
+export default useRestaurant;
